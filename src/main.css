@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background: url("./assets/bg2.jpg") scroll center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.app .side-nav {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.app .side-nav .side-nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  margin: auto 0;
+  margin-left: 30%;
+}
+.app .side-nav .side-nav-container .nav-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgba(26, 26, 26, 0.2941176471);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 2px solid rgba(122, 122, 122, 0.0352941176);
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.app .side-nav .side-nav-container .nav-icon .m-auto {
+  margin: 9px;
+}
+.app .side-nav .side-nav-container .nav-icon .nav-text {
+  position: absolute;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: 0.3s ease-in-out;
+  left: 50px;
+  color: white;
+}
+.app .side-nav .side-nav-container .nav-icon:hover {
+  background-color: rgba(86, 86, 86, 0.2941176471);
+  cursor: pointer;
+  width: 150px;
+}
+.app .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+}
+.app .main .container {
+  background-color: rgba(26, 26, 26, 0.2941176471);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 80%;
+  height: 90vh;
+  border-radius: 80px;
+  border: 2px solid rgba(122, 122, 122, 0.0352941176);
+}/*# sourceMappingURL=main.css.map */
