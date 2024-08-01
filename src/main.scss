@@ -48,6 +48,9 @@
   margin-left: auto;
   margin-top: 10px;
 }
+.transition-s{
+  transition: .5s ease-in-out;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 9px;

@@ -56,6 +56,10 @@
   margin-top: 10px;
 }
 
+.transition-s {
+  transition: 0.5s ease-in-out;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 9px;

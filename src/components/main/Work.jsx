@@ -18,51 +18,51 @@ const Work = () => {
         // transition={{ ease: "easeOut", duration: 1 }}
       >
         <motion.div
-          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work-1 hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work-1 hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1.5, delay: 0.9 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1.5, delay: 0.8 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 0.4 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-3 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 0.2 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 0.6 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 1.1 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-1 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 1 }}
         ></motion.div>
         <motion.div
-          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 opacity-65 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
+          className="col-span-4 lg:col-span-2 md:col-span-4 sm:col-span-4 row-span-1 rounded-3xl bg-zinc-800 work-tab work- hover:cursor-pointer sm:min-w-52 lg:min-w-28 md:min-h-64 min-h-64 min-w-64"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
+          animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
         ></motion.div>
       </motion.div>
