@@ -1,28 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+.heading {
+  font-size: 45px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  line-height: 50px;
+}
+.normal {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  line-height: 30px;
+}
+.info-header {
+  background-color: #9e9e9e57;
+  padding: 6px 20px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.info-header-text {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.duration {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.678);
+  margin-left: auto;
+  margin-top: 10px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 .app {
-  background: url("./assets/bg2.jpg") scroll center;
+  background: url("./assets/bg.jpg") scroll center;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
   .side-nav {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
     .side-nav-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 300px;
-      margin: auto 0;
-      margin-left: 30%;
       .nav-icon {
         display: flex;
         align-items: center;
@@ -52,23 +101,269 @@
       .nav-icon:hover {
         background-color: #5656564b;
         cursor: pointer;
+        // width: 150px;
+      }
+      .nav-icon-active {
+        background-color: #5656564b;
+        cursor: pointer;
         width: 150px;
       }
     }
   }
   .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 90%;
+    // display: flex;
     .container {
-      background-color: #1a1a1a4b;
+      background-color: #2222224b;
       backdrop-filter: blur(10px);
-      width: 80%;
-      height: 90vh;
+      // width: 80%;
+      // height: 90%;
       border-radius: 80px;
-      border: 2px solid #7a7a7a09;
+      border: 2px solid #7a7a7a28;
+      // padding: 20px 40px 0 40px;
+      // overflow: hidden;
+      overflow: scroll;
+
+      .nav-indicator {
+        width: 100%;
+        .nav-indicator-text {
+          font-size: 20px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 200;
+          transition: 0.3s ease-in-out;
+          padding: 6px 15px;
+          border-radius: 13px;
+          background-color: #9e9e9e57;
+          width: fit-content;
+          color: white;
+        }
+      }
+      .row {
+        display: flex;
+        width: 100%;
+        height: 95%;
+
+        .col {
+          .prgh-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            min-height: 100px;
+            margin-bottom: 2rem;
+          }
+          .resume-btn {
+            border-radius: 50px;
+            background-color: #2727276e;
+            color: rgb(235, 235, 235);
+            font-size: 24px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            transition: 0.3s ease-in-out;
+          }
+          .resume-btn:hover {
+            cursor: pointer;
+            background-color: #2c2c2c96;
+            color: rgb(255, 255, 255);
+          }
+        }
+        .col-70 {
+          .prgh-2 {
+            margin-top: 60px;
+          }
+
+          .skill-stats {
+            background-color: #10101047;
+            backdrop-filter: blur(10px);
+            height: fit-content;
+            border-radius: 41px;
+            padding: 20px;
+            margin-top: auto;
+            .skills-container {
+              width: 100%;
+              .skill-ul {
+                padding: 20px;
+                .skill-li {
+                  display: flex;
+                  width: 100%;
+                  margin: 12px 0;
+                  .skill-name {
+                    color: white;
+                    font-size: 14px;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 300;
+                    width: 150px;
+                  }
+                  .progress-bar {
+                    .bar-container {
+                      background-color: #8f8f8f;
+                      border-radius: 50px;
+                      height: 15px;
+                      width: 90%;
+                    }
+                    .barCompleted-90 {
+                      background-color: #2c2c2c;
+                      width: 92%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-85 {
+                      background-color: #2c2c2c;
+                      width: 85%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-75 {
+                      background-color: #2c2c2c;
+                      width: 77%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-75 {
+                      background-color: #2c2c2c;
+                      width: 76%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-80 {
+                      background-color: #2c2c2c;
+                      width: 77%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-80 {
+                      background-color: #2c2c2c;
+                      width: 74%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-65 {
+                      background-color: #2c2c2c;
+                      width: 66%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+                    .barCompleted-60 {
+                      background-color: #2c2c2c;
+                      width: 60%;
+                      border-radius: 50px;
+                      height: 15px;
+                    }
+
+                    .label {
+                      color: white;
+                      font-size: 10px;
+                      font-family: "Poppins", sans-serif;
+                      font-weight: 200;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .col-30 {
+          height: 95%;
+          .exp-tab {
+            display: flex;
+            flex-direction: column;
+            background-color: #1010106e;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            border-radius: 60px;
+            padding: 20px;
+            height: 100%;
+            overflow: scroll;
+            .exp {
+              margin: 0 auto;
+            }
+            .exp-container {
+              padding: 40px;
+              .exp-texts {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 40px;
+              }
+              .education {
+                .edu-school {
+                  color: white;
+                  font-size: 17px;
+                  font-family: "Poppins", sans-serif;
+                  font-weight: 400;
+                  margin-top: 10px;
+                }
+                .edu-deg {
+                  color: white;
+                  font-size: 12px;
+                  font-family: "Poppins", sans-serif;
+                  font-weight: 200;
+                  font-style: italic;
+                }
+              }
+            }
+          }
+        }
+      }
+      .work-tab {
+        transition: 0.4s ease-in-out;
+        border-radius: 40px;
+      }
+      .work-tab:hover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.03);
+      }
+      .work-1 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-2 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-3 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-4 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-5 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-6 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-7 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .work-8 {
+        background: url("./assets/work-1.png") scroll center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    .side-nav-container {
+      margin-left: 30%;
+    }
+    .main {
+      width: 90%;
+      .container {
+        height: 90%;
+      }
     }
   }
 }
