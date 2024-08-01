@@ -37,7 +37,7 @@ const contactData = [
 const Contact = () => {
   return (
     <motion.div
-      className="container  lg:w-4/5 md:w-full m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
+      className="container  lg:w-4/5 md:w-11/12 m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}

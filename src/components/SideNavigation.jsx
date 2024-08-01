@@ -37,7 +37,7 @@ const navParams = [
 ];
 const SideNavigation = () => {
   return (
-    <div className="side-nav flex flex-row w-full lg:flex lg:flex-col md:flex md:flex-row lg:w-1/6 md:w-full">
+    <div className="side-nav flex flex-row w-full lg:flex lg:flex-col md:flex md:flex-row lg:w-1/6 md:w-full h-1/6 lg:h-auto">
       <div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto">
         {navParams.map((item) => {
           const containerVariants = {

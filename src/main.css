@@ -121,6 +121,9 @@
   cursor: pointer;
   width: 150px;
 }
+.app .main {
+  height: 95%;
+}
 .app .main .container {
   background-color: rgba(34, 34, 34, 0.2941176471);
   -webkit-backdrop-filter: blur(10px);
@@ -261,31 +264,14 @@
   font-family: "Poppins", sans-serif;
   font-weight: 200;
 }
-.app .main .container .row .col-30 {
-  height: 95%;
-}
 .app .main .container .row .col-30 .exp-tab {
-  display: flex;
-  flex-direction: column;
   background-color: rgba(16, 16, 16, 0.431372549);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  width: 100%;
   border-radius: 60px;
-  padding: 20px;
-  height: 100%;
-  overflow: scroll;
 }
 .app .main .container .row .col-30 .exp-tab .exp {
   margin: 0 auto;
-}
-.app .main .container .row .col-30 .exp-tab .exp-container {
-  padding: 40px;
-}
-.app .main .container .row .col-30 .exp-tab .exp-container .exp-texts {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
 }
 .app .main .container .row .col-30 .exp-tab .exp-container .education .edu-school {
   color: white;
@@ -356,8 +342,12 @@
   }
   .app .main {
     width: 90%;
+    height: 90%;
   }
   .app .main .container {
     height: 90%;
+  }
+  .app .main .container .col-30 {
+    height: 95%;
   }
 }/*# sourceMappingURL=main.css.map */

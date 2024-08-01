@@ -6,7 +6,7 @@ import { expData } from "./data/exp.data";
 const About = () => {
   return (
     <motion.div
-      className="container lg:w-4/5 md:w-full m-auto lg:pl-5 lg:pr-5 lg:pb-5 lg:pt-5 pl-10 pr-10 sm:w-11/12 w-11/12 h-5/6"
+      className="container lg:w-4/5 md:w-11/12 m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
@@ -34,7 +34,7 @@ const About = () => {
               regarding mobile app development.
             </motion.h4>
           </div>
-          <div className="skill-stats lg:w-11/12 w-full lg:mb-0 mb-6">
+          <div className="skill-stats lg:w-11/12 w-full lg:mb-0 md:mb-6 mb-6">
             <div className="info-header">
               <h4 className="info-header-text">SKILLS</h4>
             </div>
@@ -80,17 +80,17 @@ const About = () => {
           </div>
         </div>
         <div className="col-30  lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible">
-          <aside className="exp-tab">
+          <aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-max lg:overflow-scroll">
             <div className="info-header exp">
               <h4 className="info-header-text">EXPERIENCE</h4>
             </div>
-            <div className="exp-container">
+            <div className="exp-container p-10">
               <ul className="exp-ul">
                 {expData.map((item) => {
                   return (
                     <motion.div
                       key={item.id}
-                      className="exp-texts"
+                      className="exp-texts flex flex-col mb-10"
                       initial={{ x: 100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{

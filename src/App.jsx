@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="app lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-screen">
       <SideNavigation />
-      <main className="main lg:flex lg:flex-row lg:justify-center lg:items-center h-full md:w-full flex">
+      <main className="main lg:flex lg:flex-row lg:justify-center lg:items-center md:w-full flex">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
