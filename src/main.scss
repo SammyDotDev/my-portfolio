@@ -71,6 +71,7 @@
   background: transparent;
 }
 .app {
+  background-color: #4b4b4b;
   background: url("./assets/bg.jpg") scroll center;
   background-size: cover;
   .side-nav {
@@ -114,14 +115,14 @@
     }
   }
   .main {
-    height: 95%;
+    height: 90%;
     .container {
       background-color: #2222224b;
       backdrop-filter: blur(10px);
       // width: 80%;
       // height: 90%;
-      border-radius: 80px;
-      border: 2px solid #7a7a7a28;
+      border-radius: 50px;
+      //   border: 2px solid #7a7a7a28;
       // padding: 20px 40px 0 40px;
       // overflow: hidden;
       overflow: scroll;
@@ -178,22 +179,27 @@
             backdrop-filter: blur(10px);
             height: fit-content;
             border-radius: 41px;
-            padding: 20px;
             margin-top: auto;
+            // width: 100%;
             .skills-container {
-              width: 100%;
+            //   width: 100%;
               .skill-ul {
                 padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
                 .skill-li {
                   display: flex;
-                  width: 100%;
+                  width: fit-content;
                   margin: 12px 0;
+                  background-color: rgba(0, 0, 0, 0.507);
+                  padding: 10px 20px;
+                  border-radius: 99px;
                   .skill-name {
                     color: white;
                     font-size: 14px;
                     font-family: "Poppins", sans-serif;
                     font-weight: 300;
-                    width: 150px;
                   }
                   .progress-bar {
                     .bar-container {

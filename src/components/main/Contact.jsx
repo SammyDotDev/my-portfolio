@@ -22,14 +22,14 @@ const contactData = [
     id: 3,
     social: "+234 908 017 0598",
     icon: <WhatsAppIcon />,
-    href: "https://wa.me/message/+2349080170598",
+    href: "https://wa.me/+2349080170598",
     delay:0.7
   },
   {
     id: 4,
     social: "okwudiashisamuel@gmail.com",
     icon: <MailIcon />,
-    href: "samuelchukwunaza2@gmail.com",
+    href: "mailto: okwudiashisamuel@gmail.com",
     delay:0.9
   },
 ];
@@ -37,7 +37,7 @@ const contactData = [
 const Contact = () => {
   return (
     <motion.div
-      className="container  lg:w-4/5 md:w-11/12 m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
+      className="container  lg:w-4/5 md:w-11/12 m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
@@ -65,6 +65,7 @@ const Contact = () => {
                 key={item.id}
                 target="_blank"
                 className="hover:opacity-60 transition-s"
+
               >
                 <motion.div
                   className="flex"

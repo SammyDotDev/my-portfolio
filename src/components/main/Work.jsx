@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Work = () => {
   return (
     <motion.div
-      className="container lg:w-4/5 md:w-11/12l m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
+      className="container lg:w-4/5 md:w-11/12l m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
@@ -12,7 +12,7 @@ const Work = () => {
         <p className="nav-indicator-text">MY WORK</p>
       </section>
       <motion.div
-        className="grid h-auto min-h-full grid-cols-4 lg:grid-rows-3 md:grid-rows-4 sm:grid-rows-8 gap-3 p-20"
+        className="grid h-auto min-h-full grid-cols-4 lg:grid-rows-3 md:grid-rows-4 sm:grid-rows-8 gap-3 mt-10"
         // initial={{ x: 100, opacity: 0 }}
         // animate={{ x: 0, opacity: 1 }}
         // transition={{ ease: "easeOut", duration: 1 }}

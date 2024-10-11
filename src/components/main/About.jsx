@@ -6,7 +6,7 @@ import { expData } from "./data/exp.data";
 const About = () => {
   return (
     <motion.div
-      className="container lg:w-4/5 md:w-11/12 m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-5/6"
+      className="container lg:w-4/5 md:w-11/12 m-auto px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-11/12 h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
@@ -16,7 +16,7 @@ const About = () => {
       </section>
       <div className="row lg:flex lg:flex-row md:flex-col w-full md:flex flex flex-col">
         <div className="col-70 lg:flex lg:w-4/5 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center">
-          <div className="prgh-2 lg:w-4/5 w-10/12 md:mt-6 lg:mt-auto lg:mb-auto m-auto">
+          <div className="prgh-2 lg:w-4/5 w-full md:mt-6 lg:mt-auto lg:mb-auto m-auto">
             <motion.h4
               className="normal mb-8  md:text-xl text-base lg:text-base lg:text-left "
               initial={{ opacity: 0 }}
@@ -34,8 +34,8 @@ const About = () => {
               regarding mobile app development.
             </motion.h4>
           </div>
-          <div className="skill-stats lg:w-11/12 w-full lg:mb-0 md:mb-6 mb-6">
-            <div className="info-header">
+          <div className="skill-stats lg:p-5 lg:w-11/12 w-full pt-5 lg:mb-0 md:mb-6 mb-6">
+            <div className="info-header m-5">
               <h4 className="info-header-text">SKILLS</h4>
             </div>
             <motion.div className="skills-container">
@@ -55,23 +55,7 @@ const About = () => {
                       }}
                     >
                       <li className="skill-name">{item.name}</li>
-                      <div className="progress-bar w-full lg:ml-5 ml-0 mt-2">
-                        <ProgressBar
-                          completed={item.mastery}
-                          className="wrapper"
-                          barContainerClassName="bar-container"
-                          completedClassName={completedClassName}
-                          animateOnRender={true}
-                          labelAlignment="center"
-                          customLabelStyles={{
-                            textAlign: "center",
-                            color: "white",
-                            fontFamily: "poppins",
-                            fontWeight: "300",
-                            fontSize: 12,
-                          }}
-                        />
-                      </div>
+
                     </motion.div>
                   );
                 })}
@@ -79,12 +63,12 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-        <div className="col-30  lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible">
+        <div className="col-30 lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible lg:mt-0 mt-5">
           <aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-max lg:overflow-scroll">
             <div className="info-header exp">
               <h4 className="info-header-text">EXPERIENCE</h4>
             </div>
-            <div className="exp-container p-10">
+            <div className="exp-container lg:p-10 p-5">
               <ul className="exp-ul">
                 {expData.map((item) => {
                   return (
