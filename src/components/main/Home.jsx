@@ -47,7 +47,7 @@ const Home = () => {
             </motion.h4>
           </div>
           <a
-            href="samuel-resume.pdf"
+            href="../../../myResume.pdf"
             download={"SamuelResume.pdf"}
             className="md:flex"
           >
