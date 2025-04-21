@@ -1,20 +1,8 @@
 export const skillStats = [
   {
-    id: 1,
-    name: "HTML",
-    mastery: 90,
-    delay:0.3
-  },
-  {
-    id: 2,
-    name: "CSS",
-    mastery: 85,
-    delay:0.5
-  },
-  {
     id: 3,
-    name: "Javascript",
-    mastery: 75,
+    name: "Typescript",
+    mastery: 80,
     delay:0.7
   },
   {
