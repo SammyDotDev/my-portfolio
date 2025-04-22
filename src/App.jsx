@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="app lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-full relative">
 			<motion.div
-				className="side-main w-1/6 "
+				className="side-main w-1/6"
 				initial={{ y: 1000, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ ease: "easeOut", duration: 1 }}
