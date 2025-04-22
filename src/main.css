@@ -367,18 +367,23 @@ html {
     flex-direction: column;
   }
   .app .side-main {
+    border: 10px solid transparent;
+    border-top: 0;
+    background-color: transparent;
     flex-direction: row;
     z-index: 999999;
     width: 100%;
+    position: fixed;
+    bottom: 10px;
   }
   .app .side-main .side-nav {
+    height: 100%;
     width: 100%;
     flex-direction: row;
-    align-items: flex-start;
+    position: relative;
   }
   .app .side-main .side-nav .side-nav-container {
     border: 10px solid rgba(0, 0, 0, 0.4509803922);
-    margin: 10px 0 0 auto;
   }
   .app .side-main .side-nav .side-nav-container .nav-icon {
     width: 100%;
