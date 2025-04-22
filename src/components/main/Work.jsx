@@ -4,7 +4,7 @@ import TitleContainer from "../components/TitleContainer";
 
 const Work = () => {
 	return (
-		<MainWrapper>
+		<MainWrapper id={3}>
 			<motion.div
 				className="container lg:w-full md:w-full pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}

@@ -4,6 +4,7 @@ import ContactIcon from "../svg-icons/ContactIon";
 import HomeIcon from "../svg-icons/HomeIcon";
 import WorkIcon from "../svg-icons/WorkIcon";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const navParams = [
 	{
@@ -36,44 +37,89 @@ const navParams = [
 	},
 ];
 const SideNavigation = () => {
+	const [activeSection, setActiveSection] = useState(null);
+
+	useEffect(() => {
+		const sectionIds = navParams.map((item) => `section-${item.id}`);
+		const observers = [];
+
+		sectionIds.forEach((id) => {
+			const section = document.getElementById(id);
+			if (!section) return;
+
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					if (entry.isIntersecting) {
+						setActiveSection(id);
+					}
+				},
+				{
+					root: null,
+					rootMargin: "0px",
+					threshold: 0.6, // Trigger when 60% of section is visible
+				}
+			);
+
+			observer.observe(section);
+			observers.push(observer);
+		});
+
+		return () => {
+			observers.forEach((observer) => observer.disconnect());
+		};
+	}, [navParams]);
+
 	return (
 		// <div className="side-nav-container">
-			<div className="side-nav flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-screen lg:h-screen fixed">
-				<div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto justify-center">
-					{navParams.map((item) => {
-						const containerVariants = {
-							hidden: {
-								opacity: 0,
-								x: -200,
+		<motion.div className="side-nav flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-screen lg:h-screen fixed">
+			<div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto justify-center">
+				{navParams.map((item) => {
+					const sectionId = `section-${item.id}`;
+					const isActive = activeSection === sectionId;
+					const handleScroll = (e) => {
+						e.preventDefault();
+						const section = document.getElementById(sectionId);
+						if (section) {
+							section.scrollIntoView({ behavior: "smooth" });
+						}
+					};
+					const containerVariants = {
+						hidden: {
+							opacity: 0,
+							x: -300,
+						},
+						visible: {
+							opacity: 1,
+							x: 0,
+							transition: {
+								delay: item.delay,
+								duration: 1,
 							},
-							visible: {
-								opacity: 1,
-								x: 0,
-								transition: {
-									delay: item.delay,
-									duration: 0.3,
-									// type: "spring",
-								},
-							},
-						};
-						return (
-							<NavLink key={item.id} to={item.navigation}>
-								{({ isActive }) => (
-									<motion.div
-										className={`nav-icon ${isActive ? "nav-icon-active" : ""}`}
-										variants={containerVariants}
-										initial="hidden"
-										animate="visible"
-									>
-										{item.icon}
-										<p className="nav-text">{item.name}</p>
-									</motion.div>
-								)}
-							</NavLink>
-						);
-					})}
-				</div>
+						},
+					};
+					return (
+						<div
+							key={item.id}
+							onClick={handleScroll}
+							href={`#section-${item.id}`}
+						>
+							{/* <NavLink key={item.id}> */}
+							{/* {({ isActive }) => ( */}
+							<motion.div
+								className={`nav-icon ${isActive ? "nav-icon-active" : ""}`}
+								variants={containerVariants}
+								initial="hidden"
+								animate="visible"
+							>
+								{item.icon}
+								<p className="nav-text">{item.name}</p>
+							</motion.div>
+							{/* </NavLink> */}
+						</div>
+					);
+				})}
 			</div>
+		</motion.div>
 		//{/* </div> */}
 	);
 };

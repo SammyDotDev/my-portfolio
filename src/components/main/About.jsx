@@ -3,11 +3,48 @@ import { skillStats } from "./data/skills.data";
 import { expData } from "./data/exp.data";
 import MainWrapper from "../components/MainWrapper";
 import TitleContainer from "../components/TitleContainer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { Flip } from "gsap/Flip";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
+
+// gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin, TextPlugin);
+// gsap.registerEffect({
+// 	name: "fade",
+// 	effect: (targets, config) => {
+// 		return gsap.to(targets, { duration: config.duration, opacity: 0 });
+// 	},
+// 	defaults: { duration: 2 }, //defaults get applied to any "config" object passed to the effect
+// 	extendTimeline: true, //now you can call the effect directly on any GSAP timeline to have the result immediately inserted in the position you define (default is sequenced at the end)
+// });
+
+// // now we can use it like this:
+// gsap.from(".container", {
+//     scrollTrigger: ".container",
+//     x: 500,
+// });
+
+// gsap.to(".container", {
+// 	scrollTrigger: ".container", // start the animation when ".container" enters the viewport (once)
+// 	x: -500,
+// });
 
 const About = () => {
+	useEffect(() => {
+		AOS.init();
+	}, []);
 	return (
-		<MainWrapper>
+		<MainWrapper id={2}>
 			<motion.div
+				data-aos="flip-down"
+				data-aos-easing="ease-out-cubic"
+				data-aos-duration="2000"
 				className="container lg:w-full md:w-full px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

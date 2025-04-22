@@ -3,11 +3,19 @@ import homeAnimation from "../../assets/cubes.json";
 import { motion } from "framer-motion";
 import MainWrapper from "../components/MainWrapper";
 import TitleContainer from "../components/TitleContainer";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Home = () => {
+	useEffect(() => {
+		Aos.init();
+	}, []);
 	return (
-		<MainWrapper>
+		<MainWrapper id={1}>
 			<motion.div
+				data-aos="flip-down"
+				data-aos-easing="ease-out-cubic"
+				data-aos-duration="2000"
 				className="container lg:w-full px-7 pb-5 pt-5 w-full h-full"
 				initial={{ x: 100, opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}

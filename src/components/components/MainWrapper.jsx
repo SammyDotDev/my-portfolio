@@ -1,6 +1,7 @@
-const MainWrapper = ({ children }) => {
+const MainWrapper = ({ children, id }) => {
 	return (
 		<div
+			id={`section-${id}`}
 			style={{
 				// height: "100vh",
 				display: "flex",
