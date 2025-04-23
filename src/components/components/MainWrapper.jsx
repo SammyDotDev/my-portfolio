@@ -1,6 +1,7 @@
 const MainWrapper = ({ children, id }) => {
 	return (
 		<div
+			className="main-wrapper"
 			id={`section-${id}`}
 			style={{
 				// height: "100vh",
@@ -8,12 +9,12 @@ const MainWrapper = ({ children, id }) => {
 				flexDirection: "column",
 				justifyContent: "center",
 				alignItems: "center",
-				width: "100%",
+
 				borderWidth: 10,
 				borderColor: "#00000073",
 				borderTopWidth: 0,
 				borderBottomWidth: 10,
-				borderLeftWidth: 0,
+				// borderLeftWidth: 0,
 				minHeight: "100vh",
 			}}
 		>

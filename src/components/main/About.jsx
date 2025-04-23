@@ -42,9 +42,9 @@ const About = () => {
 	return (
 		<MainWrapper id={2}>
 			<motion.div
-				data-aos="flip-down"
-				data-aos-easing="ease-out-cubic"
-				data-aos-duration="2000"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
 				className="container lg:w-full md:w-full px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
