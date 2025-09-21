@@ -55,6 +55,8 @@ export const workData = [
 			`${path}/airbnb-clone/airbnb3.jpg`,
 			`${path}/airbnb-clone/airbnb4.jpg`,
 			`${path}/airbnb-clone/airbnb5.jpg`,
+			`${path}/airbnb-clone/airbnb6.jpg`,
+			`${path}/airbnb-clone/airbnb7.jpg`,
 		],
 		techStack: ["React Native", "TypeScript", "Clerk", "Expo"],
 		githubLink: "https://github.com/SammyDotDev/airbnb-clone",
@@ -73,6 +75,7 @@ export const workData = [
 			`${path}/tasknest/tasknest3.PNG`,
 			`${path}/tasknest/tasknest4.PNG`,
 			`${path}/tasknest/tasknest5.PNG`,
+			`${path}/tasknest/tasknest6.PNG`,
 		],
 		techStack: [
 			"React Native",

@@ -23,7 +23,7 @@ const Work = () => {
 			>
 				<TitleContainer>MY WORK</TitleContainer>
 				<motion.div
-					className="grid h-auto min-h-full grid-cols-4 lg:grid-rows-3 md:grid-rows-4 sm:grid-rows-8 gap-3 mt-10"
+					className="flex flex-wrap h-auto min-h-full gap-3 mt-10 w-full justify-center"
 					// initial={{ x: 100, opacity: 0 }}
 					// animate={{ x: 0, opacity: 1 }}
 					// transition={{ ease: "easeOut", duration: 1 }}

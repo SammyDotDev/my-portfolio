@@ -7,11 +7,15 @@ import {
 	ChevronLeft,
 	ChevronRight,
 } from "lucide-react";
+import { createPortal } from "react-dom";
 
+const mountElement = document.getElementById("overlay");
 const WorkCard = ({ work }: { work: WorkItem }) => {
 	const [showModal, setShowModal] = useState(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+	// if (mountElement) {
+	// 	mountElement.addEventListener("click", () => setShowModal(false));
+	// }
 	const nextImage = () => {
 		setCurrentImageIndex((prev) =>
 			prev === work.subImages.length - 1 ? 0 : prev + 1
@@ -25,25 +29,20 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	};
 	return (
 		<>
-			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-[23%] min-h-[500]">
 				{/* Main Image */}
 				<div className="relative overflow-hidden">
 					<img
 						src={work.image}
 						alt={work.title}
-						className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+						className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300 "
 					/>
 					<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
-					{work.featured && (
-						<div className="absolute top-3 right-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
-							Featured
-						</div>
-					)}
 				</div>
 
 				{/* Card Content */}
 				<div className="p-6">
-					<h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-white transition-colors">
+					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-white transition-colors">
 						{work.title}
 					</h3>
 
@@ -124,118 +123,128 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 			</div>
 
 			{/* Modal */}
-			{showModal && (
-				<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-					<div className="bg-white rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto w-full">
-						{/* Modal Header */}
-						<div className="flex justify-between items-center p-6 border-b">
-							<h2 className="text-2xl font-bold text-gray-900">{work.title}</h2>
-							<button
-								onClick={() => setShowModal(false)}
-								className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-							>
-								<X size={24} className="text-gray-600" />
-							</button>
-						</div>
+			{showModal &&
+				createPortal(
+					<div
+						className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+						onClick={() => setShowModal(false)}
+					>
+						<div
+							className="bg-[#141d1d] max-w-4xl max-h-[90vh] overflow-y-auto w-full"
+							onClick={(event) => event.stopPropagation()}
+						>
+							{/* Modal Header */}
+							<div className="flex justify-between items-center p-6 border-b border-[#234041]">
+								<h2 className="text-2xl font-bold text-gray-900">
+									{work.title}
+								</h2>
+								<button onClick={() => setShowModal(false)} className="p-2">
+									<X
+										size={24}
+										className="text-gray-600 hover:text-gray-100 transition-all"
+									/>
+								</button>
+							</div>
 
-						{/* Modal Content */}
-						<div className="p-6">
-							{/* Image Gallery */}
-							<div className="relative mb-6">
-								<img
-									src={work.subImages[currentImageIndex]}
-									alt={`${work.title} - Image ${currentImageIndex + 1}`}
-									className="w-full h-64 md:h-80 object-cover rounded-lg"
-								/>
+							{/* Modal Content */}
+							<div className="p-6">
+								{/* Image Gallery */}
+								<div className="relative mb-6">
+									<img
+										src={work.subImages[currentImageIndex]}
+										alt={`${work.title} - Image ${currentImageIndex + 1}`}
+										className="w-full h-64 md:h-80 object-contain rounded-lg"
+									/>
 
-								{work.subImages.length > 1 && (
-									<>
-										<button
-											onClick={prevImage}
-											className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
-										>
-											<ChevronLeft size={20} />
-										</button>
-										<button
-											onClick={nextImage}
-											className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
-										>
-											<ChevronRight size={20} />
-										</button>
-									</>
-								)}
+									{work.subImages.length > 1 && (
+										<>
+											<button
+												onClick={prevImage}
+												className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+											>
+												<ChevronLeft size={20} />
+											</button>
+											<button
+												onClick={nextImage}
+												className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-all"
+											>
+												<ChevronRight size={20} />
+											</button>
+										</>
+									)}
 
-								{/* Image indicators */}
-								<div className="flex justify-center gap-2 mt-4">
-									{work.subImages.map((_, index) => (
-										<button
-											key={index}
-											onClick={() => setCurrentImageIndex(index)}
-											className={`w-3 h-3 rounded-full transition-all ${
-												currentImageIndex === index
-													? "bg-blue-600"
-													: "bg-gray-300"
-											}`}
-										/>
-									))}
+									{/* Image indicators */}
+									<div className="flex justify-center gap-2 mt-4">
+										{work.subImages.map((_, index) => (
+											<button
+												key={index}
+												onClick={() => setCurrentImageIndex(index)}
+												className={`w-3 h-3 rounded-full transition-all ${
+													currentImageIndex === index
+														? "bg-[#5bdade]"
+														: "bg-gray-300"
+												}`}
+											/>
+										))}
+									</div>
 								</div>
-							</div>
 
-							{/* Description */}
-							<div className="mb-6">
-								<h3 className="text-lg font-semibold text-gray-900 mb-2">
-									About this project
-								</h3>
-								<p className="text-gray-700 leading-relaxed">
-									{work.description}
-								</p>
-							</div>
-
-							{/* Tech Stack */}
-							<div className="mb-6">
-								<h3 className="text-lg font-semibold text-gray-900 mb-3">
-									Technologies Used
-								</h3>
-								<div className="flex flex-wrap gap-2">
-									{work.techStack.map((tech, index) => (
-										<span
-											key={index}
-											className="px-3 py-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 text-blue-800 text-sm rounded-lg font-medium"
-										>
-											{tech}
-										</span>
-									))}
+								{/* Description */}
+								<div className="mb-6">
+									<h3 className="text-lg font-semibold text-gray-100 mb-2">
+										About this project
+									</h3>
+									<p className="text-gray-500 leading-relaxed">
+										{work.description}
+									</p>
 								</div>
-							</div>
 
-							{/* Links */}
-							<div className="flex gap-4">
-								<a
-									href={work.githubLink}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex items-center gap-2 bg-gray-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors"
-								>
-									<Github size={20} />
-									View Code
-								</a>
+								{/* Tech Stack */}
+								<div className="mb-6">
+									<h3 className="text-lg font-semibold text-gray-900 mb-3">
+										Technologies Used
+									</h3>
+									<div className="flex flex-wrap gap-2">
+										{work.techStack.map((tech, index) => (
+											<span
+												key={index}
+												className="px-3 py-2 bg-[#234041] text-gray-100 text-sm rounded-lg font-medium"
+											>
+												{tech}
+											</span>
+										))}
+									</div>
+								</div>
 
-								{work.liveLink && (
+								{/* Links */}
+								<div className="flex gap-4">
 									<a
-										href={work.liveLink}
+										href={work.githubLink}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+										className="flex items-center gap-2 bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-700 transition-all"
 									>
-										<ExternalLink size={20} />
-										Live Demo
+										<Github size={20} />
+										View Codebase
 									</a>
-								)}
+
+									{work.liveLink && (
+										<a
+											href={work.liveLink}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+										>
+											<ExternalLink size={20} />
+											Live Demo
+										</a>
+									)}
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			)}
+					</div>,
+					mountElement
+				)}
 		</>
 	);
 };

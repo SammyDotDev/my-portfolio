@@ -200,7 +200,7 @@ html {
   margin-top: 60px;
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats {
-  background-color: rgba(75, 75, 75, 0.2784313725);
+  background-color: #141d1d;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   height: -moz-fit-content;
@@ -288,7 +288,7 @@ html {
   font-weight: 200;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab {
-  background-color: rgba(75, 75, 75, 0.2784313725);
+  background-color: #141d1d;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }

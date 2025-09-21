@@ -107,7 +107,7 @@ const About = () => {
 										return (
 											<motion.div
 												key={item.id}
-												className="exp-texts flex flex-col mb-10 bg-[#0000009d] p-2"
+												className="exp-texts flex flex-col mb-10 bg-[#] p-2"
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
 												transition={{
