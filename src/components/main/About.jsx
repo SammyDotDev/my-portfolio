@@ -96,7 +96,7 @@ const About = () => {
 						</div>
 					</div>
 					<div className="col-30 lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible lg:mt-0 mt-5">
-						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 lg:h-1/5 h-full lg:overflow-scroll">
+						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-full lg:overflow-scroll">
 							<div className="info-header exp">
 								<h4 className="info-header-text">EXPERIENCE</h4>
 							</div>
