@@ -6,13 +6,7 @@ import TitleContainer from "../components/TitleContainer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 
-import { Flip } from "gsap/Flip";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { TextPlugin } from "gsap/TextPlugin";
 
 // gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin, TextPlugin);
 // gsap.registerEffect({
@@ -103,17 +97,17 @@ const About = () => {
 						</div>
 					</div>
 					<div className="col-30 lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible lg:mt-0 mt-5">
-						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-full lg:overflow-scroll">
+						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-1/5 lg:overflow-scroll">
 							<div className="info-header exp">
 								<h4 className="info-header-text">EXPERIENCE</h4>
 							</div>
-							<div className="exp-container lg:p-10 p-5">
-								<ul className="exp-ul">
+							<div className="exp-container lg:p-10">
+								<ul className="exp-ul h-[50vh] rounded-lg overflow-scroll">
 									{expData.map((item) => {
 										return (
 											<motion.div
 												key={item.id}
-												className="exp-texts flex flex-col mb-10"
+												className="exp-texts flex flex-col mb-10 bg-[#0000009d] p-2"
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
 												transition={{

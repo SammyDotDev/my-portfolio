@@ -18,7 +18,7 @@ function App() {
 				<SideNavigation />
 			</motion.div>
 			<main className="main lg:flex lg:flex-row lg:justify-center lg:items-center md:w-full flex lg:pt-0 w-full">
-				<div className="scroll-container m-auto">
+				<div className="scroll-container">
 					<Home />
 					<About />
 					<Work />

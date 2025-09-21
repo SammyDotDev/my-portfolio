@@ -5,7 +5,7 @@ import MainWrapper from "../components/MainWrapper";
 import TitleContainer from "../components/TitleContainer";
 import { useEffect } from "react";
 import Aos from "aos";
-import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v1.pdf";
+import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v2.pdf";
 
 const Home = () => {
 	useEffect(() => {
@@ -75,7 +75,6 @@ const Home = () => {
 						</div>
 						<a
 							href={ResumePdf}
-							// download={"SamuelResume.pdf"}
                             target="_blank"
                             rel="noopener noreferrer"
 							className="md:flex"

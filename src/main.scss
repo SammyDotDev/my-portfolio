@@ -90,7 +90,7 @@ html {
 }
 
 .app {
-	background-color: #2d241f;
+	background-color: #141d1d;
 	// background: url("./assets/bg.jpg") scroll center;
 	background-size: cover;
 	overflow: scroll;
@@ -102,7 +102,7 @@ html {
 			width: 14%;
 			// background-color: #00000073;
 			// margin: 10px;
-			// border-radius: 0 30px 30px 0;
+			border-radius: 0 30px 30px 0;
 			// border: 1px solid white;
 			.side-nav-container {
 				margin: auto;
@@ -110,9 +110,9 @@ html {
 					display: flex;
 					align-items: center;
 					position: relative;
-					background-color: #2d241f;
+					background-color: #141d1d;
 					backdrop-filter: blur(10px);
-					border: 10px solid #2d241f;
+					border: 10px solid #141d1d;
 					// border-radius: 50px;
 					// width: 50px;
 					// height: 50px;
@@ -150,29 +150,31 @@ html {
 	}
 
 	.main {
-		height: 90%;
+        display: flex;
+        flex: 1;
+		// height: 90%;
 		// margin-left: auto;fit
 		position: relative;
 		.scroll-container {
 			// border: 10px solid rgb(139, 57, 57);
 			// margin-left: auto;
-			height: 100%;
+			// height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: end;
 			align-items: end;
-			// width: 100%;
+			width: 100%;
 			// overflow: scroll;
 			// display: flex;
 			// flex-direction: column;
 			// margin-top: auto;
 			// margin-bottom: auto;
 			.main-wrapper {
-				width: 90%;
+				width: 100%;
 				.container {
 					background-color: #00000073;
 					backdrop-filter: blur(10px);
-					min-height: 90vh;
+					// min-height: 90vh;
 					// border-radius: 20px;
 					//   border: 2px solid #7a7a7a28;
 					// padding: 20px 40px 0 40px;
@@ -439,8 +441,8 @@ html {
 					.nav-icon {
 						width: 100%;
 						height: 60px;
-						background-color: #2d241f73;
-						border: 10px solid #2d241f73;
+						background-color: #141d1d73;
+						border: 10px solid #141d1d73;
 					}
 					.nav-text {
 						display: none;
