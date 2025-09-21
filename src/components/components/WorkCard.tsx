@@ -29,7 +29,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	};
 	return (
 		<>
-			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-[23%] min-h-[500]">
+			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500]">
 				{/* Main Image */}
 				<div className="relative overflow-hidden">
 					<img
