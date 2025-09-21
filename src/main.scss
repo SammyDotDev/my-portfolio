@@ -132,7 +132,7 @@ html {
 						// left: 50px;
 						color: white;
 						width: 100px;
-                        text-align: center;
+						text-align: center;
 					}
 				}
 				.nav-icon:hover {
@@ -150,38 +150,20 @@ html {
 	}
 
 	.main {
-        display: flex;
-        flex: 1;
-		// height: 90%;
-		// margin-left: auto;fit
+		display: flex;
+		flex: 1;
 		position: relative;
 		.scroll-container {
-			// border: 10px solid rgb(139, 57, 57);
-			// margin-left: auto;
-			// height: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: end;
-			align-items: end;
-			width: 100%;
-			// overflow: scroll;
-			// display: flex;
-			// flex-direction: column;
-			// margin-top: auto;
-			// margin-bottom: auto;
 			.main-wrapper {
 				width: 100%;
 				.container {
 					background-color: #00000073;
-					backdrop-filter: blur(10px);
-					// min-height: 90vh;
-					// border-radius: 20px;
-					//   border: 2px solid #7a7a7a28;
-					// padding: 20px 40px 0 40px;
-					// overflow: hidden;
-					//   overflow: scroll;
-					// margin-left: auto;
-					// border: 1px solid white;
+
+					overflow: scroll;
+
+					padding-bottom: 100px;
 
 					.nav-indicator {
 						width: 100%;
@@ -219,9 +201,8 @@ html {
 								backdrop-filter: blur(10px);
 								height: fit-content;
 								margin-top: auto;
-								// width: 100%;
+
 								.skills-container {
-									//   width: 100%;
 									.skill-ul {
 										padding: 20px;
 										display: flex;
@@ -312,11 +293,8 @@ html {
 						.exp-tab {
 							background-color: #141d1d;
 							backdrop-filter: blur(10px);
-							.exp {
-								margin: 0 auto;
-							}
+
 							.exp-container {
-								
 								.education {
 									.edu-school {
 										color: white;
@@ -396,15 +374,13 @@ html {
 			margin-left: 30%;
 		}
 		.main {
-			//   width: 90%;
-			//   height: 90%;
 			.scroll-container {
 				.container {
-					height: 90%;
+					// height: 90%;
 
 					// margin-right: 2.5%;
 					.col-30 {
-						height: 95%;
+						// height: 95%;
 					}
 				}
 			}

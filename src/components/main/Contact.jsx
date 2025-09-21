@@ -40,14 +40,14 @@ const contactData = [
 
 const Contact = () => {
 	useEffect(() => {
-		Aos.init();
+		// Aos.init();
 	}, []);
 	return (
 		<MainWrapper id={4}>
 			<motion.div
-				data-aos="fade-up"
-				data-aos-duration="1000"
-				data-aos-easing="ease-in-out"
+				// data-aos="fade-up"
+				// data-aos-duration="1000"
+				// data-aos-easing="ease-in-out"
 				className="container lg:w-full md:w-full m-auto pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

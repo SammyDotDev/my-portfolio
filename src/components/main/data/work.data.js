@@ -84,7 +84,7 @@ export const workData = [
 			"Supabase",
 			"Tailwind CSS",
 		],
-		githubLink: "https://github.com/SammyDotDev/tasknest",
+		githubLink: "https://github.com/SammyDotDev/Task-Mg",
 		liveLink: null,
 		featured: false,
 	},

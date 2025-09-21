@@ -7,7 +7,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-
 // gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin, TextPlugin);
 // gsap.registerEffect({
 // 	name: "fade",
@@ -31,14 +30,14 @@ import { useEffect } from "react";
 
 const About = () => {
 	useEffect(() => {
-		AOS.init();
+		// AOS.init();
 	}, []);
 	return (
 		<MainWrapper id={2}>
 			<motion.div
-				data-aos="fade-up"
-				data-aos-duration="1000"
-				data-aos-easing="ease-in-out"
+				// data-aos="fade-up"
+				// data-aos-duration="1000"
+				// data-aos-easing="ease-in-out"
 				className="container lg:w-full md:w-full px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
@@ -97,17 +96,20 @@ const About = () => {
 						</div>
 					</div>
 					<div className="col-30 lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible lg:mt-0 mt-5">
-						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-1/5 lg:overflow-scroll">
+						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 lg:h-1/5 h-full lg:overflow-scroll">
 							<div className="info-header exp">
 								<h4 className="info-header-text">EXPERIENCE</h4>
 							</div>
 							<div className="exp-container lg:p-10">
 								<ul className="exp-ul h-[50vh] rounded-lg overflow-scroll">
-									{expData.map((item) => {
+									{expData.map((item, index) => {
 										return (
 											<motion.div
 												key={item.id}
-												className="exp-texts flex flex-col mb-10 bg-[#] p-2"
+												className={`exp-texts flex flex-col mb-10 bg-[#] p-2 ${
+													index != expData.length - 1 &&
+													"border-b border-[#234041]"
+												}`}
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
 												transition={{
