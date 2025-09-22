@@ -31,9 +31,9 @@ const contactData = [
 	},
 	{
 		id: 4,
-		social: "okwudiashisamuel@gmail.com",
+		social: "nazacodes@gmail.com",
 		icon: <MailIcon />,
-		href: "mailto: okwudiashisamuel@gmail.com",
+		href: "mailto: nazacodes@gmail.com",
 		delay: 0.9,
 	},
 ];

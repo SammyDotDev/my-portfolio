@@ -61,7 +61,7 @@ const Home = () => {
 								Welcome to my digital world!
 							</motion.h4>
 						</div>
-						<div className="prgh-2 w-1/2 m-auto flex justify-center items-center">
+						<div className="prgh-2 sm:w-[90%] md:w-full lg:w-1/2 m-auto flex justify-center items-center">
 							<motion.h4
 								className="normal mb-8 md:text-xl text-base lg:text-base text-center lg:text-center"
 								initial={{ opacity: 0, y: 200 }}
@@ -75,8 +75,8 @@ const Home = () => {
 						</div>
 						<a
 							href={ResumePdf}
-                            target="_blank"
-                            rel="noopener noreferrer"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="md:flex"
 						>
 							<motion.button
