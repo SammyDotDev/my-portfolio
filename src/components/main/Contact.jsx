@@ -40,7 +40,7 @@ const contactData = [
 
 const Contact = () => {
 	useEffect(() => {
-		// Aos.init();
+		Aos.init();
 	}, []);
 	return (
 		<MainWrapper id={4}>

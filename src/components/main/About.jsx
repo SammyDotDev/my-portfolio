@@ -30,18 +30,18 @@ import { useEffect } from "react";
 
 const About = () => {
 	useEffect(() => {
-		// AOS.init();
+		AOS.init();
 	}, []);
 	return (
 		<MainWrapper id={2}>
 			<motion.div
-				// data-aos="fade-up"
-				// data-aos-duration="1000"
-				// data-aos-easing="ease-in-out"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
 				className="container lg:w-full md:w-full px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ ease: "easeOut", duration: 1 }}
+				// initial={{ opacity: 0, y: 150 }}
+				// animate={{ opacity: 1, y: 0 }}
+				// transition={{ ease: "easeOut", duration: 1 }}
 			>
 				<TitleContainer>ABOUT ME</TitleContainer>
 				<div className="row lg:flex lg:flex-row md:flex-col w-full md:flex flex flex-col">
