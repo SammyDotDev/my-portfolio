@@ -50,7 +50,7 @@ const Home = () => {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 1, duration: 0.4 }}
 							>
-								Hello, I&apos;m Okwudiashi Samuel!
+								Hello, I&apos;m <motion.h1 className={"font-extrabold"}>Sammy</motion.h1>
 							</motion.h1>
 							<motion.h4
 								className="normal md:text-3xl text-center lg:text-left mt-10 font-bold"
@@ -68,9 +68,8 @@ const Home = () => {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 2, duration: 1.5 }}
 							>
-								I’m a Mobile App Developer | Web Developer | UI/UX Designer, who
-								aims at achieving seamless digital experiences in the digital
-								world, where innovation knows no bounds.
+
+                                I’m a Software Engineer, and a software engineering grad. I’m passionate about creating high-end and impactful software applications and being a part of great projects that contribute to different levels of enterprises
 							</motion.h4>
 						</div>
 						<a

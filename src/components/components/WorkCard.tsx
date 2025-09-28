@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useState } from "react";
 import { WorkItem } from "../../types/types";
 import {
@@ -29,9 +30,9 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	};
 	return (
 		<>
-			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500]">
+			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4">
 				{/* Main Image */}
-				<div className="relative overflow-hidden">
+				<div className="relative overflow-hidden bg-[#334443] rounded-2xl">
 					<img
 						src={work.image}
 						alt={work.title}
@@ -130,7 +131,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 						onClick={() => setShowModal(false)}
 					>
 						<div
-							className="bg-[#141d1d] max-w-4xl max-h-[90vh] overflow-y-auto w-full"
+							className="bg-[#141d1d] max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-2xl"
 							onClick={(event) => event.stopPropagation()}
 						>
 							{/* Modal Header */}
@@ -138,10 +139,10 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 								<h2 className="text-2xl font-bold text-gray-900">
 									{work.title}
 								</h2>
-								<button onClick={() => setShowModal(false)} className="p-2">
+								<button onClick={() => setShowModal(false)} className="p-2 bg-[#334443] rounded-xl">
 									<X
 										size={24}
-										className="text-gray-600 hover:text-gray-100 transition-all"
+										className="text-gray-500 hover:text-gray-100 transition-all"
 									/>
 								</button>
 							</div>
@@ -149,7 +150,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 							{/* Modal Content */}
 							<div className="p-6">
 								{/* Image Gallery */}
-								<div className="relative mb-6">
+								<div className="relative mb-6 p-5 bg-[#334443] rounded-2xl">
 									<img
 										src={work.subImages[currentImageIndex]}
 										alt={`${work.title} - Image ${currentImageIndex + 1}`}

@@ -1,7 +1,7 @@
 const MainWrapper = ({ children, id }) => {
 	return (
 		<div
-			className="main-wrapper"
+			className="main-wrapper lg:mr-5 my-5 rounded-3xl overflow-hidden"
 			id={`section-${id}`}
 			style={{
 				// minHeight: "100vh",

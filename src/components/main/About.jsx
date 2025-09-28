@@ -67,17 +67,16 @@ const About = () => {
 								cross-platform framework regarding mobile app development.
 							</motion.h4>
 						</div>
-						<div className="skill-stats lg:p-5 lg:w-11/12 w-full pt-5 lg:mb-0 md:mb-6 mb-6">
-							<div className="info-header m-5">
+						<div className="skill-stats lg:p-5 lg:w-11/12 w-full pt-5 lg:mb-0 md:mb-6 mb-6 rounded-2xl">
+							<div className="info-header m-5 rounded-lg">
 								<h4 className="info-header-text">SKILLS</h4>
 							</div>
 							<motion.div className="skills-container">
 								<ul className="skill-ul">
 									{skillStats.map((item) => {
-										const completedClassName = `barCompleted-${item.mastery}`;
 										return (
 											<motion.div
-												className="skill-li lg:flex lg:flex-row flex flex-col"
+												className="skill-li lg:flex lg:flex-row flex flex-col rounded-lg"
 												key={item.id}
 												initial={{ x: -100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -96,8 +95,8 @@ const About = () => {
 						</div>
 					</div>
 					<div className="col-30 lg:flex lg:w-2/6 lg:flex-col lg:justify-evenly md:w-full md:flex md:flex-col md:justify-center lg:overflow-scroll overflow-visible lg:mt-0 mt-5">
-						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-full lg:overflow-scroll">
-							<div className="info-header exp">
+						<aside className="exp-tab lg:flex lg:flex-col w-full p-5 h-full lg:overflow-scroll rounded-2xl">
+							<div className="info-header exp rounded-lg">
 								<h4 className="info-header-text">EXPERIENCE</h4>
 							</div>
 							<div className="exp-container lg:p-10">
@@ -106,7 +105,7 @@ const About = () => {
 										return (
 											<motion.div
 												key={item.id}
-												className={`exp-texts flex flex-col mb-10 bg-[#] p-2 ${
+												className={`exp-texts flex flex-col mb-10 p-2 ${
 													index != expData.length - 1 &&
 													"border-b border-[#234041]"
 												}`}

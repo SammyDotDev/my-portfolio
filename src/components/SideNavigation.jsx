@@ -71,7 +71,7 @@ const SideNavigation = () => {
 
 	return (
 		// <div className="side-nav-container">
-		<motion.div className="side-nav flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-screen lg:h-screen fixed">
+		<motion.div className="side-nav  w-1/6 flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-full lg:h-full fixed rounded-2xl py-4">
 			<div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto justify-center">
 				{navParams.map((item) => {
 					const sectionId = `section-${item.id}`;

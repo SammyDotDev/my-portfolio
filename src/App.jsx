@@ -8,17 +8,17 @@ import { motion } from "framer-motion";
 
 function App() {
 	return (
-		<div className="app lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-full relative">
+		<div className="app lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-full relative gap-5">
 			<motion.div
-				className="side-main w-1/6"
+				className="side-main w-1/6  lg:ml-5 rounded-2xl lg:flex-col lg:h-screen"
 				initial={{ y: 1000, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ ease: "easeOut", duration: 1 }}
 			>
 				<SideNavigation />
 			</motion.div>
-			<main className="main lg:flex lg:flex-row lg:justify-center lg:items-center md:w-full flex lg:pt-0 w-full">
-				<div className="scroll-container">
+			<main className="main lg:flex lg:flex-row lg:justify-center lg:items-center md:w-full flex lg:pt-0 w-full ">
+				<div className="scroll-container ">
 					<Home />
 					<About />
 					<Work />
