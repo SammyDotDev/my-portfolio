@@ -5,7 +5,7 @@ import MainWrapper from "../components/MainWrapper";
 import TitleContainer from "../components/TitleContainer";
 import { useEffect } from "react";
 import Aos from "aos";
-import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v2.pdf";
+import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v3.pdf";
 
 const Home = () => {
 	useEffect(() => {
@@ -79,12 +79,12 @@ const Home = () => {
 							className="md:flex"
 						>
 							<motion.button
-								className="resume-btn w-full p-3 md:m-auto m-auto"
+								className="resume-btn w-full py-3 px-7 md:m-auto m-auto rounded-full"
 								initial={{ y: 1000, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ ease: "easeOut", duration: 1.5 }}
 							>
-								RESUME
+								MY RESUME
 							</motion.button>
 						</a>
 					</div>

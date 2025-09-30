@@ -30,20 +30,21 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	};
 	return (
 		<>
-			<div className="group relative bg-[#141d1d] shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4">
+			<div className="group relative shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4 work-card">
 				{/* Main Image */}
-				<div className="relative overflow-hidden bg-[#334443] rounded-2xl">
+				<div className="relative overflow-hidden rounded-[47px]">
 					<img
 						src={work.image}
 						alt={work.title}
-						className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300 "
+                        loading={"lazy"}
+						className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300 rounded-[48px]"
 					/>
 					<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
 				</div>
 
 				{/* Card Content */}
 				<div className="p-6">
-					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-white transition-colors">
+					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-[#141d1d] transition-colors">
 						{work.title}
 					</h3>
 
@@ -75,16 +76,17 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 								key={index}
 								src={img}
 								alt={`${work.title} preview ${index + 1}`}
-								className="w-16 h-12 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
+                                loading={"lazy"}
+                                className="w-16 h-12 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
 								onClick={() => setShowModal(true)}
 							/>
 						))}
 						{work.subImages.length > 3 && (
 							<div
-								className="bg-[#5bdade] rounded-md flex items-center justify-center cursor-pointer hover:bg-[#234041] transition-colors flex-shrink-0 ml-auto px-5"
+								className="bg-[#343a40] rounded-[10px] flex items-center justify-center cursor-pointer hover:bg-[#6c757d] transition-colors flex-shrink-0 ml-auto px-5"
 								onClick={() => setShowModal(true)}
 							>
-								<span className="text-m text-gray-600 font-medium">
+								<span className="text-m text-[#e9ecef] font-medium">
 									+{work.subImages.length - 3}
 								</span>
 							</div>
@@ -95,7 +97,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 					<div className="flex gap-3 mt-auto">
 						<button
 							onClick={() => setShowModal(true)}
-							className="flex-1 bg-white text-[#141d1d] py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+							className="flex-1 bg-[#ced4da] text-[#141d1d] py-2 px-4 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
 						>
 							View Details
 						</button>
@@ -104,9 +106,9 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 							href={work.githubLink}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="p-2 bg-black rounded-lg hover:bg-gray-700 transition-colors"
+							className="p-2 bg-[#343a40] rounded-full hover:bg-gray-700 transition-colors"
 						>
-							<Github size={20} className="text-gray-700" />
+							<Github size={20} className="text-[#e9ecef]" />
 						</a>
 
 						{work.liveLink && (

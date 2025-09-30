@@ -31,14 +31,6 @@ export const expData = [
 		delay: 0.7,
 	},
 	{
-		id: 5,
-		description:
-			"Trainee at Digital Bridge Institute, Backend Developers Program, with PHP, mySQL and Apache",
-		timeStart: "September 2023",
-		timeEnd: "October 2023",
-		delay: 0.9,
-	},
-	{
 		id: 6,
 		description:
 			"Mobile Application Developer as Sqoolr",

@@ -1,40 +1,37 @@
-import { NavLink } from "react-router-dom";
-import AboutIcon from "../svg-icons/AboutIcon";
-import ContactIcon from "../svg-icons/ContactIon";
-import HomeIcon from "../svg-icons/HomeIcon";
-import WorkIcon from "../svg-icons/WorkIcon";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import {motion} from "framer-motion";
+import {useEffect, useState} from "react";
+import {Briefcase, Home2, Messages2, User} from "iconsax-reactjs";
+
 
 const navParams = [
-	{
-		id: 1,
-		name: "Home",
-		icon: <HomeIcon />,
-		navigation: "/",
-		delay: 0.3,
-	},
-	{
-		id: 2,
-		name: "About",
-		icon: <AboutIcon />,
-		navigation: "/about",
-		delay: 0.5,
-	},
-	{
-		id: 3,
-		name: "Work",
-		icon: <WorkIcon />,
-		navigation: "/work",
-		delay: 0.7,
-	},
-	{
-		id: 4,
-		name: "Contact",
-		icon: <ContactIcon />,
-		navigation: "/contact",
-		delay: 0.9,
-	},
+    {
+        id: 1,
+        name: "Home",
+        icon: <Home2 size="32" color="#6c757d"/>,
+        navigation: "/",
+        delay: 0.3,
+    },
+    {
+        id: 2,
+        name: "About",
+        icon: <User size="32" color="#6c757d"/>,
+        navigation: "/about",
+        delay: 0.5,
+    },
+    {
+        id: 3,
+        name: "Work",
+        icon: <Briefcase size="32" color="#6c757d"/>,
+        navigation: "/work",
+        delay: 0.7,
+    },
+    {
+        id: 4,
+        name: "Contact",
+        icon: <Messages2 size="32" color="#6c757d"/>,
+        navigation: "/contact",
+        delay: 0.9,
+    },
 ];
 const SideNavigation = () => {
 	const [activeSection, setActiveSection] = useState(null);
@@ -75,7 +72,24 @@ const SideNavigation = () => {
 			<div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto justify-center">
 				{navParams.map((item) => {
 					const sectionId = `section-${item.id}`;
-					const isActive = activeSection === sectionId;
+					const isActive = activeSection === sectionId
+                    const iconColor = isActive ? "#ffffff":"#6c757d"
+
+                    let icon;
+                    switch (item.name) {
+                        case "Home":icon = <Home2 size="32" color={iconColor}/>;
+                        break
+                        case "About":icon = <User size="32" color={iconColor}/>;
+                        break;
+                        case "Work":icon = <Briefcase size="32" color={iconColor}/>;
+                        break;
+                        case "Contact": icon = <Messages2 size="32" color={iconColor}/>;
+                        break;
+                        default:
+                            null
+
+                    }
+
 					const handleScroll = (e) => {
 						e.preventDefault();
 						const section = document.getElementById(sectionId);
@@ -111,8 +125,8 @@ const SideNavigation = () => {
 								initial="hidden"
 								animate="visible"
 							>
-								{item.icon}
-								<p className="nav-text">{item.name}</p>
+                                {icon}
+								<p className={`nav-text ${isActive ? "nav-text-active":""}`}>{item.name}</p>
 							</motion.div>
 							{/* </NavLink> */}
 						</div>

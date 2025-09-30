@@ -15,7 +15,7 @@ html {
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	font-style: normal;
-	color: white;
+	color: #141d1d;
 	line-height: 50px;
 }
 .normal {
@@ -23,7 +23,7 @@ html {
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	font-style: normal;
-	color: white;
+	color: #141d1d;
 	line-height: 30px;
 }
 .info-header {
@@ -35,7 +35,7 @@ html {
 	align-items: center;
 }
 .info-header-text {
-	color: rgb(255, 255, 255);
+  color: #141d1d;
 	font-size: 20px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 300;
@@ -46,7 +46,7 @@ html {
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	font-style: italic;
-	color: rgba(255, 255, 255, 0.678);
+  color: #141d1d;
 	margin-left: auto;
 	margin-top: 10px;
 }
@@ -74,14 +74,18 @@ html {
 }
 
 .resume-btn {
-	// border-radius: 50px;
-	background-color: #2727276e;
+
+	//background-color: #141d1d;
 	color: rgb(235, 235, 235);
 	font-size: 24px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	transition: 0.3s ease-in-out;
-	padding: 20px;
+  background-color: #212529;
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  box-shadow:  20px 20px 60px #c6c9cb,
+  -20px -20px 60px #ffffff;
 }
 .resume-btn:hover {
 	cursor: pointer;
@@ -90,8 +94,10 @@ html {
 }
 
 .app {
-	background-color: #141d1d;
-	// background: url("./assets/bg.jpg") scroll center;
+	//background-color: #141d1d;
+  background-color: #f8f9fa;
+
+  // background: url("./assets/bg.jpg") scroll center;
 	background-size: cover;
 	overflow: scroll;
 	.side-main {
@@ -106,18 +112,23 @@ html {
 			// margin: 10px;
 			//border-radius: 0 30px 30px 0;
 			// border: 1px solid white;
-          background-color: #0000009d;
+          background-color: #e9ecef;
+          border: 1px solid #e9ecef;
 
-			.side-nav-container {
+
+          .side-nav-container {
 				margin: auto;
 				.nav-icon {
 					display: flex;
 					align-items: center;
 					position: relative;
-					background-color: #141d1d;
+					//background-color: #adb5bd;
 					backdrop-filter: blur(10px);
-					border: 10px solid #141d1d;
-                    border-radius: 15px;
+                    border-radius: 100px;
+                    background: linear-gradient(145deg, #d2d4d7, #f9fdff);
+                    box-shadow:  20px 20px 35px #c6c9cb,
+                  -20px -20px 35px #ffffff;
+                    padding: 10px;
 					// border-radius: 50px;
 					// width: 50px;
 					// height: 50px;
@@ -137,10 +148,13 @@ html {
 						font-style: normal;
 						transition: 0.3s ease-in-out;
 						// left: 50px;
-						color: white;
+						color: #6c757d;
 						width: 100px;
 						text-align: center;
 					}
+                  .nav-text-active {
+                    color:#ffffff;
+                  }
 				}
 				.nav-icon:hover {
 					background-color: #00000073;
@@ -148,8 +162,9 @@ html {
 					// width: 150px;
 				}
 				.nav-icon-active {
-					background-color: #00000073;
-					cursor: pointer;
+					//background-color: #212529;
+                  background: linear-gradient(145deg, #212529, #212529);
+                  cursor: pointer;
 					width: 100%;
 				}
 			}
@@ -167,10 +182,17 @@ html {
 				width: 100%;
 
 				.container {
-					background-color: #00000073;
-					overflow: scroll;
+                  background-color: #e9ecef;
+                  overflow: scroll;
+                  border: 1px solid #e9ecef;
 					//padding-bottom: 100px;
                   border-radius: 24px;
+                  .work-card{
+                    border-radius: 50px;
+                    background: #e9ecef;
+                    box-shadow: inset 20px 20px 35px #c6c9cb,
+                    inset -20px -20px 35px #ffffff;
+                  }
 					.nav-indicator {
 						width: 100%;
 						.nav-indicator-text {
@@ -181,7 +203,7 @@ html {
 							padding: 6px 15px;
 							background-color: #9e9e9e57;
 							width: fit-content;
-							color: white;
+							color: #141d1d;
 						}
 					}
 					.row {
@@ -203,8 +225,12 @@ html {
 							}
 
 							.skill-stats {
-								background-color: #141d1d;
-								backdrop-filter: blur(10px);
+								//background-color: #141d1d;
+                              //background-color: #dee2e6;
+                              background: #e9ecef;
+                              box-shadow: inset 20px 20px 35px #c6c9cb,
+                              inset -20px -20px 35px #ffffff;
+                              backdrop-filter: blur(10px);
 								height: fit-content;
 								margin-top: auto;
 
@@ -218,77 +244,16 @@ html {
 											display: flex;
 											width: fit-content;
 											margin: 12px 0;
-											background-color: rgba(0, 0, 0, 0.507);
+                                          //background-color: #234041;
 											padding: 10px 20px;
 											.skill-name {
-												color: white;
+												color: #141d1d;
 												font-size: 14px;
 												font-family: "Poppins", sans-serif;
 												font-weight: 300;
 											}
-											.progress-bar {
-												.bar-container {
-													background-color: #8f8f8f;
-													border-radius: 50px;
-													height: 15px;
-													width: 90%;
-												}
-												.barCompleted-90 {
-													background-color: #2c2c2c;
-													width: 92%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-85 {
-													background-color: #2c2c2c;
-													width: 85%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-75 {
-													background-color: #2c2c2c;
-													width: 77%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-75 {
-													background-color: #2c2c2c;
-													width: 76%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-80 {
-													background-color: #2c2c2c;
-													width: 77%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-80 {
-													background-color: #2c2c2c;
-													width: 74%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-65 {
-													background-color: #2c2c2c;
-													width: 66%;
-													border-radius: 50px;
-													height: 15px;
-												}
-												.barCompleted-60 {
-													background-color: #2c2c2c;
-													width: 60%;
-													border-radius: 50px;
-													height: 15px;
-												}
 
-												.label {
-													color: white;
-													font-size: 10px;
-													font-family: "Poppins", sans-serif;
-													font-weight: 200;
-												}
-											}
+
 										}
 									}
 								}
@@ -297,21 +262,24 @@ html {
 					}
 					.col-30 {
 						.exp-tab {
-							background-color: #141d1d;
+							//background-color: #dee2e6;
+                          background: #e9ecef;
+                          box-shadow: inset 20px 20px 35px #c6c9cb,
+                          inset -20px -20px 35px #ffffff;
 							backdrop-filter: blur(10px);
 
 							.exp-container {
 								.education {
 									
 									.edu-school {
-										color: white;
+										color: #141d1d;
 										font-size: 17px;
 										font-family: "Poppins", sans-serif;
 										font-weight: 400;
 										margin-top: 10px;
 									}
 									.edu-deg {
-										color: white;
+										color: #141d1d;
 										font-size: 12px;
 										font-family: "Poppins", sans-serif;
 										font-weight: 200;
@@ -330,46 +298,7 @@ html {
 					transition: 0.4s ease-in-out;
 					transform: scale(1.03);
 				}
-				.work-1 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-2 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-3 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-4 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-5 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-6 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-7 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
-				.work-8 {
-					background: url("./assets/work-1.png") scroll center;
-					background-size: cover;
-					background-repeat: no-repeat;
-				}
+
 			}
 		}
 	}
@@ -394,8 +323,8 @@ html {
 		}
 	}
 }
-@media (max-width: 1124) {
-}
+//@media (max-width: 1124) {
+//}
 @media (max-width: 1024px) {
 	.app {
 		flex-direction: column;
