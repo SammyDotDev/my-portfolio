@@ -9,6 +9,8 @@ import {
 	ChevronRight,
 } from "lucide-react";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
+
 
 const mountElement = document.getElementById("overlay");
 const WorkCard = ({ work }: { work: WorkItem }) => {
@@ -132,9 +134,13 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 						className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[99999] p-4"
 						onClick={() => setShowModal(false)}
 					>
-						<div
+						<motion.div
 							className="bg-[#1C1C1C] max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-2xl"
 							onClick={(event) => event.stopPropagation()}
+                            initial={{ opacity: 0, scale:0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale:0 }}
+                            transition={{ ease: "easeInOut", duration: 0.5 }}
 						>
 							{/* Modal Header */}
 							<div className="flex justify-between items-center p-6 border-b border-[#555555]">
@@ -244,7 +250,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 									)}
 								</div>
 							</div>
-						</div>
+						</motion.div>
 					</div>,
 					mountElement
 				)}
