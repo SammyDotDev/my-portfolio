@@ -2,7 +2,7 @@
 const TitleContainer = ({ children }) => {
 	return (
 		<section className="nav-indicator">
-			<p className="nav-indicator-text rounded-full">{children}</p>
+			<p className="nav-indicator-text text-white rounded-full">{children}</p>
 		</section>
 	);
 };

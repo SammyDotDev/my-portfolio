@@ -44,11 +44,11 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 
 				{/* Card Content */}
 				<div className="p-6">
-					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-[#141d1d] transition-colors">
+					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-gray-100 transition-colors">
 						{work.title}
 					</h3>
 
-					<p className="text-gray-600 text-sm mb-4 line-clamp-3">
+					<p className="text-gray-400 text-sm mb-4 line-clamp-3">
 						{work.description}
 					</p>
 
@@ -57,7 +57,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 						{work.techStack.slice(0, 4).map((tech, index) => (
 							<span
 								key={index}
-								className="px-2 py-1 bg-[#234041] text-gray-100 text-xs rounded-full font-medium"
+								className="px-2 py-1 bg-[#383838] text-gray-100 text-xs rounded-full font-medium"
 							>
 								{tech}
 							</span>
@@ -129,22 +129,22 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 			{showModal &&
 				createPortal(
 					<div
-						className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+						className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[99999] p-4"
 						onClick={() => setShowModal(false)}
 					>
 						<div
-							className="bg-[#141d1d] max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-2xl"
+							className="bg-[#1C1C1C] max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-2xl"
 							onClick={(event) => event.stopPropagation()}
 						>
 							{/* Modal Header */}
-							<div className="flex justify-between items-center p-6 border-b border-[#234041]">
-								<h2 className="text-2xl font-bold text-gray-900">
+							<div className="flex justify-between items-center p-6 border-b border-[#555555]">
+								<h2 className="text-2xl font-bold text-gray-100">
 									{work.title}
 								</h2>
-								<button onClick={() => setShowModal(false)} className="p-2 bg-[#334443] rounded-xl">
+								<button onClick={() => setShowModal(false)} className="p-2 bg-[#555555] rounded-xl">
 									<X
 										size={24}
-										className="text-gray-500 hover:text-gray-100 transition-all"
+										className="text-gray-100 "
 									/>
 								</button>
 							</div>
@@ -152,7 +152,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 							{/* Modal Content */}
 							<div className="p-6">
 								{/* Image Gallery */}
-								<div className="relative mb-6 p-5 bg-[#334443] rounded-2xl">
+								<div className="relative mb-6 p-5 bg-[#000000] rounded-2xl">
 									<img
 										src={work.subImages[currentImageIndex]}
 										alt={`${work.title} - Image ${currentImageIndex + 1}`}
@@ -184,8 +184,8 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 												onClick={() => setCurrentImageIndex(index)}
 												className={`w-3 h-3 rounded-full transition-all ${
 													currentImageIndex === index
-														? "bg-[#5bdade]"
-														: "bg-gray-300"
+														? "bg-gray-300"
+														: "bg-[#383838]"
 												}`}
 											/>
 										))}
@@ -197,7 +197,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 									<h3 className="text-lg font-semibold text-gray-100 mb-2">
 										About this project
 									</h3>
-									<p className="text-gray-500 leading-relaxed">
+									<p className="text-gray-400 leading-relaxed">
 										{work.description}
 									</p>
 								</div>
@@ -211,7 +211,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 										{work.techStack.map((tech, index) => (
 											<span
 												key={index}
-												className="px-3 py-2 bg-[#234041] text-gray-100 text-sm rounded-lg font-medium"
+												className="px-3 py-2 bg-[#383838] text-gray-100 text-sm rounded-lg font-medium"
 											>
 												{tech}
 											</span>

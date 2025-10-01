@@ -86,7 +86,7 @@ const SideNavigation = () => {
                         case "Contact": icon = <Messages2 size="32" color={iconColor}/>;
                         break;
                         default:
-                            null
+                            icon = null;
 
                     }
 

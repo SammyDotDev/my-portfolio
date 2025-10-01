@@ -76,7 +76,7 @@ const About = () => {
 									{skillStats.map((item) => {
 										return (
 											<motion.div
-												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#adb5bd]"
+												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#000000]"
 												key={item.id}
 												initial={{ x: -100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -86,7 +86,7 @@ const About = () => {
 													delay: item.delay,
 												}}
 											>
-												<li className="skill-name">{item.name}</li>
+												<li className="skill-name text-white">{item.name}</li>
 											</motion.div>
 										);
 									})}
@@ -107,7 +107,7 @@ const About = () => {
 												key={item.id}
 												className={`exp-texts flex flex-col mb-10 p-2 ${
 													index != expData.length - 1 &&
-													"border-b border-[#adb5bd]"
+													"border-b border-[#383838]"
 												}`}
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -125,7 +125,7 @@ const About = () => {
 										);
 									})}
 								</ul>
-								<div className="education border-t-4 border-[#adb5bd] pt-4">
+								<div className="education border-t-4 border-[#383838] pt-4">
 									<h4 className="info-header-text">EDUCATION</h4>
 									<h5 className="edu-school">Bowen University, Iwo</h5>
 									<h6 className="edu-deg">

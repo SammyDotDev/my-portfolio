@@ -17,7 +17,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  color: #141d1d;
+  color: #ffffff;
   line-height: 50px;
 }
 
@@ -26,7 +26,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  color: #141d1d;
+  color: #ffffff;
   line-height: 30px;
 }
 
@@ -40,7 +40,7 @@ html {
 }
 
 .info-header-text {
-  color: #141d1d;
+  color: #ffffff;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -52,7 +52,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
-  color: #141d1d;
+  color: #ffffff;
   margin-left: auto;
   margin-top: 10px;
 }
@@ -82,15 +82,14 @@ html {
 }
 
 .resume-btn {
-  color: rgb(235, 235, 235);
+  background-color: #ffffff;
+  color: #000000;
   font-size: 24px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   transition: 0.3s ease-in-out;
-  background-color: #212529;
   backdrop-filter: blur(10px);
   border-radius: 100px;
-  box-shadow: 20px 20px 60px #c6c9cb, -20px -20px 60px #ffffff;
 }
 
 .resume-btn:hover {
@@ -100,7 +99,7 @@ html {
 }
 
 .app {
-  background-color: #f8f9fa;
+  background-color: #000000;
   background-size: cover;
   overflow: scroll;
 }
@@ -111,8 +110,8 @@ html {
 }
 .app .side-main .side-nav {
   height: 95%;
-  background-color: #e9ecef;
-  border: 1px solid #e9ecef;
+  background-color: #1C1C1C;
+  border: 1px solid #1C1C1C;
 }
 .app .side-main .side-nav .side-nav-container {
   margin: auto;
@@ -123,8 +122,8 @@ html {
   position: relative;
   backdrop-filter: blur(10px);
   border-radius: 100px;
-  background: linear-gradient(145deg, #d2d4d7, #f9fdff);
-  box-shadow: 20px 20px 35px #c6c9cb, -20px -20px 35px #ffffff;
+  background: linear-gradient(145deg, #191919, #1e1e1e);
+  box-shadow: 20px 20px 60px #181818, -20px -20px 60px #202020;
   padding: 10px;
   transition: 0.5s ease-in-out;
   margin-left: auto;
@@ -150,7 +149,7 @@ html {
   cursor: pointer;
 }
 .app .side-main .side-nav .side-nav-container .nav-icon-active {
-  background: linear-gradient(145deg, #212529, #212529);
+  background: #000000;
   cursor: pointer;
   width: 100%;
 }
@@ -167,15 +166,14 @@ html {
   width: 100%;
 }
 .app .main .scroll-container .main-wrapper .container {
-  background-color: #e9ecef;
+  background-color: #1C1C1C;
   overflow: scroll;
-  border: 1px solid #e9ecef;
-  border-radius: 24px;
+  border-radius: 30px;
 }
 .app .main .scroll-container .main-wrapper .container .work-card {
   border-radius: 50px;
-  background: #e9ecef;
-  box-shadow: inset 20px 20px 35px #c6c9cb, inset -20px -20px 35px #ffffff;
+  background: #1C1C1C;
+  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
 }
 .app .main .scroll-container .main-wrapper .container .nav-indicator {
   width: 100%;
@@ -188,7 +186,6 @@ html {
   padding: 6px 15px;
   background-color: rgba(158, 158, 158, 0.3411764706);
   width: fit-content;
-  color: #141d1d;
 }
 .app .main .scroll-container .main-wrapper .container .row {
   display: flex;
@@ -206,9 +203,8 @@ html {
   margin-top: 60px;
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats {
-  background: #e9ecef;
-  box-shadow: inset 20px 20px 35px #c6c9cb, inset -20px -20px 35px #ffffff;
-  backdrop-filter: blur(10px);
+  background: #1C1C1C;
+  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
   height: fit-content;
   margin-top: auto;
 }
@@ -225,15 +221,13 @@ html {
   padding: 10px 20px;
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats .skills-container .skill-ul .skill-li .skill-name {
-  color: #141d1d;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab {
-  background: #e9ecef;
-  box-shadow: inset 20px 20px 35px #c6c9cb, inset -20px -20px 35px #ffffff;
-  backdrop-filter: blur(10px);
+  background: #1C1C1C;
+  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-school {
   color: #141d1d;
@@ -268,12 +262,13 @@ html {
     flex-direction: column;
   }
   .app .side-main {
-    border: 10px solid transparent;
     border-top: 0;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.537254902);
     flex-direction: row;
-    z-index: 999999;
-    width: 100%;
+    z-index: 999;
+    width: 90%;
+    left: 5%;
+    border-radius: 100px;
     position: fixed;
     bottom: 10px;
   }
