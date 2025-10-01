@@ -103,7 +103,7 @@ html {
           height: 95%;
           background-color: #1C1C1C;
           border: 1px solid #1C1C1C;
-
+          border-radius: 30px;
 
           .side-nav-container {
 				margin: auto;
@@ -250,14 +250,12 @@ html {
 								.education {
 									
 									.edu-school {
-										color: #141d1d;
 										font-size: 17px;
 										font-family: "Poppins", sans-serif;
 										font-weight: 400;
 										margin-top: 10px;
 									}
 									.edu-deg {
-										color: #141d1d;
 										font-size: 12px;
 										font-family: "Poppins", sans-serif;
 										font-weight: 200;

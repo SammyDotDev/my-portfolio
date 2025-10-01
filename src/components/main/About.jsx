@@ -127,8 +127,8 @@ const About = () => {
 								</ul>
 								<div className="education border-t-4 border-[#383838] pt-4">
 									<h4 className="info-header-text">EDUCATION</h4>
-									<h5 className="edu-school">Bowen University, Iwo</h5>
-									<h6 className="edu-deg">
+									<h5 className="edu-school text-white">Bowen University, Iwo</h5>
+									<h6 className="edu-deg text-white">
 										Bachelor of Science - Software Engineering
 									</h6>
 								</div>

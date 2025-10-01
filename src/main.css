@@ -112,6 +112,7 @@ html {
   height: 95%;
   background-color: #1C1C1C;
   border: 1px solid #1C1C1C;
+  border-radius: 30px;
 }
 .app .side-main .side-nav .side-nav-container {
   margin: auto;
@@ -230,14 +231,12 @@ html {
   box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-school {
-  color: #141d1d;
   font-size: 17px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   margin-top: 10px;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-deg {
-  color: #141d1d;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
