@@ -2,6 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "monoMMM_5"; /* Give your font a unique name */
+  src: url("/public/fonts/monoMMM_5.ttf") format("ttf"), url("/public/fonts/monoMMM_5.ttf") format("ttf"); /* Provide multiple formats for broader browser support */
+  font-weight: normal; /* Define the weight (e.g., normal, bold, or numeric values like 400, 700) */
+  font-style: normal; /* Define the style (e.g., normal, italic) */
+  font-display: swap; /* Control font loading behavior (e.g., swap, block, fallback, optional) */
+}
 html {
   scroll-behavior: smooth;
   background-color: #000000;

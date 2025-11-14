@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: "monoMMM_5"; /* Give your font a unique name */
+	src: url("/public/fonts/monoMMM_5.ttf") format("ttf"),
+		/* Specify the font file path and format */
+			url("/public/fonts/monoMMM_5.ttf") format("ttf"); /* Provide multiple formats for broader browser support */
+	font-weight: normal; /* Define the weight (e.g., normal, bold, or numeric values like 400, 700) */
+	font-style: normal; /* Define the style (e.g., normal, italic) */
+	font-display: swap; /* Control font loading behavior (e.g., swap, block, fallback, optional) */
+}
+
 html {
 	scroll-behavior: smooth;
 	background-color: #000000;
