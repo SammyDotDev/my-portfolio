@@ -73,7 +73,7 @@ const SideNavigation = () => {
 				{navParams.map((item) => {
 					const sectionId = `section-${item.id}`;
 					const isActive = activeSection === sectionId
-                    const iconColor = isActive ? "#ffffff":"#6c757d"
+                    const iconColor = isActive ? "#aceeb4" : "#6c757d";
 
                     let icon;
                     switch (item.name) {

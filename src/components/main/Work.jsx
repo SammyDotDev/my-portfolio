@@ -28,8 +28,8 @@ const Work = () => {
 					animate={{ x: 0, opacity: 1 }}
 					transition={{ ease: "easeOut", duration: 1 }}
 				>
-					{workData.map((work) => (
-						<WorkCard work={work} />
+					{workData.map((work, index) => (
+						<WorkCard key={index} work={work} />
 					))}
 				</motion.div>
 			</motion.div>

@@ -6,11 +6,15 @@ import TitleContainer from "../components/TitleContainer";
 import { useEffect } from "react";
 import Aos from "aos";
 import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v3.pdf";
+import { useTypewriterOnce } from "../../utils";
 
 const Home = () => {
 	useEffect(() => {
 		Aos.init();
 	}, []);
+
+  const { display, cursorOn } = useTypewriterOnce("Sammy", 120, 600);
+
 	return (
 		<MainWrapper id={1}>
 			<motion.div
@@ -50,7 +54,12 @@ const Home = () => {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 1, duration: 0.4 }}
 							>
-								Hello, I&apos;m <motion.h1 className={"font-extrabold"}>Sammy</motion.h1>
+								Hello, I&apos;m{" "}
+								<motion.h1 className={"font-extrabold text-[#aceeb4]"}>
+									{/* Sammy| */}
+									{display}
+									<span aria-hidden="true">{cursorOn ? "|" : "\u00A0"}</span>
+								</motion.h1>
 							</motion.h1>
 							<motion.h4
 								className="normal md:text-3xl text-center lg:text-left mt-10 font-bold"
@@ -68,8 +77,10 @@ const Home = () => {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 2, duration: 1.5 }}
 							>
-
-                                I’m a Software Engineer, and a software engineering grad. I’m passionate about creating high-end and impactful software applications and being a part of great projects that contribute to different levels of enterprises
+								I’m a Software Engineer, and a software engineering grad. I’m
+								passionate about creating high-end and impactful software
+								applications and being a part of great projects that contribute
+								to different levels of enterprises
 							</motion.h4>
 						</div>
 						<a

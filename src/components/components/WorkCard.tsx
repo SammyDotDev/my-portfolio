@@ -32,13 +32,18 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	};
 	return (
 		<>
-			<div className="group relative shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4 work-card">
+			<div
+				className="group relative shadow-lg border-2
+            border-[#1c1c1c]
+            //   hover:border-[#aceeb4]
+              transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4 work-card"
+			>
 				{/* Main Image */}
 				<div className="relative overflow-hidden rounded-[47px]">
 					<img
 						src={work.image}
 						alt={work.title}
-                        loading={"lazy"}
+						loading={"lazy"}
 						className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300 rounded-[48px]"
 					/>
 					<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
@@ -78,8 +83,8 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 								key={index}
 								src={img}
 								alt={`${work.title} preview ${index + 1}`}
-                                loading={"lazy"}
-                                className="w-16 h-12 object-cover rounded-md cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
+								loading={"lazy"}
+								className="w-16 h-12 object-cover rounded-xl cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
 								onClick={() => setShowModal(true)}
 							/>
 						))}
@@ -99,7 +104,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 					<div className="flex gap-3 mt-auto">
 						<button
 							onClick={() => setShowModal(true)}
-							className="flex-1 bg-[#ced4da] text-[#141d1d] py-2 px-4 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+							className="flex-1 bg-[#aceeb4] text-[#141d1d] py-2 px-4 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
 						>
 							View Details
 						</button>
@@ -135,23 +140,23 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 						onClick={() => setShowModal(false)}
 					>
 						<motion.div
-							className="bg-[#1C1C1C] max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-2xl"
+							className="bg-black max-w-4xl max-h-[90vh] overflow-y-auto w-full rounded-3xl border-2 border-[#aceeb4]"
 							onClick={(event) => event.stopPropagation()}
-                            initial={{ opacity: 0, scale:0 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale:0 }}
-                            transition={{ ease: "easeInOut", duration: 0.5 }}
+							initial={{ opacity: 0, scale: 0 }}
+							animate={{ opacity: 1, scale: 1 }}
+							exit={{ opacity: 0, scale: 0 }}
+							transition={{ ease: "easeInOut", duration: 0.5 }}
 						>
 							{/* Modal Header */}
 							<div className="flex justify-between items-center p-6 border-b border-[#555555]">
 								<h2 className="text-2xl font-bold text-gray-100">
 									{work.title}
 								</h2>
-								<button onClick={() => setShowModal(false)} className="p-2 bg-[#555555] rounded-xl">
-									<X
-										size={24}
-										className="text-gray-100 "
-									/>
+								<button
+									onClick={() => setShowModal(false)}
+									className="p-1 rounded-xl"
+								>
+									<X size={24} className="text-red-300" />
 								</button>
 							</div>
 
@@ -210,14 +215,14 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 
 								{/* Tech Stack */}
 								<div className="mb-6">
-									<h3 className="text-lg font-semibold text-gray-900 mb-3">
-										Technologies Used
+									<h3 className="text-lg font-semibold text-gray-100 mb-3">
+										TECHNOLOGIES
 									</h3>
 									<div className="flex flex-wrap gap-2">
 										{work.techStack.map((tech, index) => (
 											<span
 												key={index}
-												className="px-3 py-2 bg-[#383838] text-gray-100 text-sm rounded-lg font-medium"
+												className="px-3 py-2 bg-[#aceeb4] text-black text-sm rounded-full font-medium"
 											>
 												{tech}
 											</span>
@@ -231,7 +236,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 										href={work.githubLink}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center gap-2 bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-700 transition-all"
+										className="flex items-center gap-2 bg-white text-black py-3 px-6 rounded-2xl font-medium hover:bg-gray-200 transition-all"
 									>
 										<Github size={20} />
 										View Codebase

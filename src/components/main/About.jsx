@@ -57,8 +57,8 @@ const About = () => {
 								transition={{ delay: 1, duration: 1 }}
 							>
 								My name is Okwudiashi Samuel Chukwunaza , a Software Developer,
-								and a graduate of software engineering from Bowen University, Iwo.
-								With a strong passion for programming and user experience
+								and a graduate of software engineering from Bowen University,
+								Iwo. With a strong passion for programming and user experience
 								enhancement, I am well experienced in web development and
 								cross-platform Mobile application development, as well as
 								product design. I am proficient in ReactJs as a frontend
@@ -76,7 +76,7 @@ const About = () => {
 									{skillStats.map((item) => {
 										return (
 											<motion.div
-												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#000000]"
+												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#000]"
 												key={item.id}
 												initial={{ x: -100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -86,7 +86,9 @@ const About = () => {
 													delay: item.delay,
 												}}
 											>
-												<li className="skill-name text-white">{item.name}</li>
+												<li className="skill-name text-[#aceeb4]">
+													{item.name}
+												</li>
 											</motion.div>
 										);
 									})}
@@ -99,15 +101,15 @@ const About = () => {
 							<div className="info-header exp rounded-full">
 								<h4 className="info-header-text">EXPERIENCE</h4>
 							</div>
-							<div className="exp-container lg:p-10">
-								<ul className="exp-ul h-[50vh] rounded-lg overflow-scroll">
+							<div className="exp-container lg:p-">
+								<ul className="exp-ul h-[50vh] rounded-3xl p-3  overflow-scroll border-2 border-[#1c1c1c] my-3">
 									{expData.map((item, index) => {
 										return (
 											<motion.div
 												key={item.id}
 												className={`exp-texts flex flex-col mb-10 p-2 ${
 													index != expData.length - 1 &&
-													"border-b border-[#383838]"
+													"border-b border-[#aceeb4]"
 												}`}
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -125,10 +127,12 @@ const About = () => {
 										);
 									})}
 								</ul>
-								<div className="education border-t-4 border-[#383838] pt-4">
+								<div className="education border-t-4 border-[#aceeb4] pt-4">
 									<h4 className="info-header-text">EDUCATION</h4>
-									<h5 className="edu-school text-white">Bowen University, Iwo</h5>
-									<h6 className="edu-deg text-white">
+									<h5 className="edu-school text-white">
+										Bowen University, Iwo
+									</h5>
+									<h6 className="edu-deg text-[#aceeb4]">
 										Bachelor of Science - Software Engineering
 									</h6>
 								</div>

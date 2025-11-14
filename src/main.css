@@ -31,9 +31,11 @@ html {
 }
 
 .info-header {
-  background-color: rgba(158, 158, 158, 0.3411764706);
+  background-color: #000000;
   padding: 6px 20px;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   justify-content: center;
   align-items: center;
@@ -74,6 +76,7 @@ html {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 50px;
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -82,13 +85,14 @@ html {
 }
 
 .resume-btn {
-  background-color: #ffffff;
+  background-color: #aceeb4;
   color: #000000;
   font-size: 24px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   transition: 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 100px;
 }
 
@@ -110,9 +114,9 @@ html {
 }
 .app .side-main .side-nav {
   height: 95%;
-  background-color: #1C1C1C;
-  border: 1px solid #1C1C1C;
+  border: 1px solid #1c1c1c;
   border-radius: 30px;
+  overflow: hidden;
 }
 .app .side-main .side-nav .side-nav-container {
   margin: auto;
@@ -121,10 +125,10 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  backdrop-filter: blur(10px);
+  border: 2px solid #1c1c1c;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 100px;
-  background: linear-gradient(145deg, #191919, #1e1e1e);
-  box-shadow: 20px 20px 60px #181818, -20px -20px 60px #202020;
   padding: 10px;
   transition: 0.5s ease-in-out;
   margin-left: auto;
@@ -143,14 +147,14 @@ html {
   text-align: center;
 }
 .app .side-main .side-nav .side-nav-container .nav-icon .nav-text-active {
-  color: #ffffff;
+  color: #aceeb4;
 }
 .app .side-main .side-nav .side-nav-container .nav-icon:hover {
   background-color: rgba(0, 0, 0, 0.4509803922);
   cursor: pointer;
 }
 .app .side-main .side-nav .side-nav-container .nav-icon-active {
-  background: #000000;
+  border: 2px solid #aceeb4;
   cursor: pointer;
   width: 100%;
 }
@@ -167,14 +171,12 @@ html {
   width: 100%;
 }
 .app .main .scroll-container .main-wrapper .container {
-  background-color: #1C1C1C;
   overflow: scroll;
-  border-radius: 30px;
+  border: 1px solid #1c1c1c;
+  border-radius: 35px;
 }
 .app .main .scroll-container .main-wrapper .container .work-card {
   border-radius: 50px;
-  background: #1C1C1C;
-  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
 }
 .app .main .scroll-container .main-wrapper .container .nav-indicator {
   width: 100%;
@@ -185,7 +187,10 @@ html {
   font-weight: 200;
   transition: 0.3s ease-in-out;
   padding: 6px 15px;
-  background-color: rgba(158, 158, 158, 0.3411764706);
+  background-color: #aceeb4;
+  color: #000000;
+  font-weight: 700;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .app .main .scroll-container .main-wrapper .container .row {
@@ -204,8 +209,8 @@ html {
   margin-top: 60px;
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats {
-  background: #1C1C1C;
-  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
+  background: #1c1c1c;
+  height: -moz-fit-content;
   height: fit-content;
   margin-top: auto;
 }
@@ -217,6 +222,7 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats .skills-container .skill-ul .skill-li {
   display: flex;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 12px 0;
   padding: 10px 20px;
@@ -227,8 +233,8 @@ html {
   font-weight: 300;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab {
-  background: #1C1C1C;
-  box-shadow: inset 29px 29px 57px #161616, inset -29px -29px 57px #222222;
+  border: 1px solid #1c1c1c;
+  background-color: #1c1c1c;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-school {
   font-size: 17px;
@@ -267,7 +273,6 @@ html {
     z-index: 999;
     width: 90%;
     left: 5%;
-    border-radius: 100px;
     position: fixed;
     bottom: 10px;
   }
@@ -286,7 +291,6 @@ html {
   .app .side-main .side-nav .side-nav-container .nav-icon {
     height: 60px;
     background-color: rgba(20, 29, 29, 0.4509803922);
-    border-radius: 15px;
   }
   .app .side-main .side-nav .side-nav-container .nav-text {
     display: none;
@@ -305,6 +309,4 @@ html {
     width: 100%;
     margin-left: 10px;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
