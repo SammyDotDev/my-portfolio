@@ -51,7 +51,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 
 				{/* Card Content */}
 				<div className="p-6">
-					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-gray-100 transition-colors">
+					<h3 className="text-xl font-bold text-gray-400 mb-2 group-hover:text-[#aceeb4] transition-colors">
 						{work.title}
 					</h3>
 
