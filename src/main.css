@@ -2,16 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "monoMMM_5"; /* Give your font a unique name */
-  src: url("/public/fonts/monoMMM_5.ttf") format("ttf"), url("/public/fonts/monoMMM_5.ttf") format("ttf"); /* Provide multiple formats for broader browser support */
-  font-weight: normal; /* Define the weight (e.g., normal, bold, or numeric values like 400, 700) */
-  font-style: normal; /* Define the style (e.g., normal, italic) */
-  font-display: swap; /* Control font loading behavior (e.g., swap, block, fallback, optional) */
-}
 html {
   scroll-behavior: smooth;
-  background-color: #000000;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
@@ -23,6 +16,7 @@ html {
 
 .heading {
   font-size: 45px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
   color: #ffffff;
@@ -31,6 +25,7 @@ html {
 
 .normal {
   font-size: 15px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
   color: #ffffff;
@@ -51,12 +46,14 @@ html {
 .info-header-text {
   color: #ffffff;
   font-size: 20px;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .duration {
   font-size: 12px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
   color: #ffffff;
@@ -93,6 +90,7 @@ html {
   background-color: #aceeb4;
   color: #000000;
   font-size: 24px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   transition: 0.3s ease-in-out;
   -webkit-backdrop-filter: blur(10px);
@@ -142,6 +140,7 @@ html {
 }
 .app .side-main .side-nav .side-nav-container .nav-icon .nav-text {
   font-size: 15px;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   transition: 0.3s ease-in-out;
@@ -186,6 +185,7 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container .nav-indicator .nav-indicator-text {
   font-size: 20px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   transition: 0.3s ease-in-out;
   padding: 6px 15px;
@@ -231,6 +231,7 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats .skills-container .skill-ul .skill-li .skill-name {
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab {
@@ -239,11 +240,13 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-school {
   font-size: 17px;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   margin-top: 10px;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-deg {
   font-size: 12px;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
