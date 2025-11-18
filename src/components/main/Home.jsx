@@ -5,7 +5,7 @@ import MainWrapper from "../components/MainWrapper";
 import TitleContainer from "../components/TitleContainer";
 import { useEffect } from "react";
 import Aos from "aos";
-import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume_v3.pdf";
+import ResumePdf from "../../assets/docs/Okwudiashi_Samuel_Resume.pdf";
 import { useTypewriterOnce } from "../../utils";
 
 const Home = () => {
