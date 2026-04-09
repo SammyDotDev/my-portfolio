@@ -1,4 +1,5 @@
-import Lottie from "lottie-react";
+import LottieDefault from "lottie-react";
+const Lottie = LottieDefault.default || LottieDefault;
 import homeAnimation from "../../assets/cubes.json";
 import { motion } from "framer-motion";
 import MainWrapper from "../components/MainWrapper";

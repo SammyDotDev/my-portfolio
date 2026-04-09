@@ -1,37 +1,36 @@
-import {motion} from "framer-motion";
-import {useEffect, useState} from "react";
-import {Briefcase, Home2, Messages2, User} from "iconsax-reactjs";
-
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Briefcase, Home2, Messages2, User } from "iconsax-reactjs";
 
 const navParams = [
-    {
-        id: 1,
-        name: "Home",
-        icon: <Home2 size="32" color="#6c757d"/>,
-        navigation: "/",
-        delay: 0.3,
-    },
-    {
-        id: 2,
-        name: "About",
-        icon: <User size="32" color="#6c757d"/>,
-        navigation: "/about",
-        delay: 0.5,
-    },
-    {
-        id: 3,
-        name: "Work",
-        icon: <Briefcase size="32" color="#6c757d"/>,
-        navigation: "/work",
-        delay: 0.7,
-    },
-    {
-        id: 4,
-        name: "Contact",
-        icon: <Messages2 size="32" color="#6c757d"/>,
-        navigation: "/contact",
-        delay: 0.9,
-    },
+	{
+		id: 1,
+		name: "Home",
+		icon: <Home2 size="32" color="#6c757d" />,
+		navigation: "/",
+		delay: 0.3,
+	},
+	{
+		id: 2,
+		name: "About",
+		icon: <User size="32" color="#6c757d" />,
+		navigation: "/about",
+		delay: 0.5,
+	},
+	{
+		id: 3,
+		name: "Work",
+		icon: <Briefcase size="32" color="#6c757d" />,
+		navigation: "/work",
+		delay: 0.7,
+	},
+	{
+		id: 4,
+		name: "Contact",
+		icon: <Messages2 size="32" color="#6c757d" />,
+		navigation: "/contact",
+		delay: 0.9,
+	},
 ];
 const SideNavigation = () => {
 	const [activeSection, setActiveSection] = useState(null);
@@ -54,7 +53,7 @@ const SideNavigation = () => {
 					root: null,
 					rootMargin: "0px",
 					threshold: 0.6, // Trigger when 60% of section is visible
-				}
+				},
 			);
 
 			observer.observe(section);
@@ -68,27 +67,30 @@ const SideNavigation = () => {
 
 	return (
 		// <div className="side-nav-container">
-		<motion.div className="side-nav  w-1/6 flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-full lg:h-full fixed rounded-2xl py-4">
+		<motion.div className="side-nav w-1/6 flex flex-row lg:flex lg:flex-col md:flex md:flex-row h-full lg:h-full fixed rounded-2xl py-4">
 			<div className="side-nav-container flex lg:flex lg:flex-col md:flex md:flex-row flex-row lg:h-80 lg:mt-auto lg:mb-auto lg:justify-around md:m-auto m-auto justify-center">
 				{navParams.map((item) => {
 					const sectionId = `section-${item.id}`;
-					const isActive = activeSection === sectionId
-                    const iconColor = isActive ? "#aceeb4" : "#6c757d";
-
-                    let icon;
-                    switch (item.name) {
-                        case "Home":icon = <Home2 size="32" color={iconColor}/>;
-                        break
-                        case "About":icon = <User size="32" color={iconColor}/>;
-                        break;
-                        case "Work":icon = <Briefcase size="32" color={iconColor}/>;
-                        break;
-                        case "Contact": icon = <Messages2 size="32" color={iconColor}/>;
-                        break;
-                        default:
-                            icon = null;
-
-                    }
+					const isActive = activeSection === sectionId;
+					const iconColor = isActive ? "#aceeb4" : "#fff";
+					const evenId = item.id % 2 === 0 ? item.id : -item.id;
+					let icon;
+					switch (item.name) {
+						case "Home":
+							icon = <Home2 size="32" color={iconColor} />;
+							break;
+						case "About":
+							icon = <User size="32" color={iconColor} />;
+							break;
+						case "Work":
+							icon = <Briefcase size="32" color={iconColor} />;
+							break;
+						case "Contact":
+							icon = <Messages2 size="32" color={iconColor} />;
+							break;
+						default:
+							icon = null;
+					}
 
 					const handleScroll = (e) => {
 						e.preventDefault();
@@ -105,6 +107,7 @@ const SideNavigation = () => {
 						visible: {
 							opacity: 1,
 							x: 0,
+
 							transition: {
 								delay: item.delay,
 								duration: 1,
@@ -116,6 +119,10 @@ const SideNavigation = () => {
 							key={item.id}
 							onClick={handleScroll}
 							href={`#section-${item.id}`}
+							style={{
+								transform: `rotateZ(${evenId * 1}deg) scale(${evenId === 0 ? 1 : 0.93})`,
+								transition: "0.3s ease-in-out",
+							}}
 						>
 							{/* <NavLink key={item.id}> */}
 							{/* {({ isActive }) => ( */}
@@ -125,8 +132,10 @@ const SideNavigation = () => {
 								initial="hidden"
 								animate="visible"
 							>
-                                {icon}
-								<p className={`nav-text ${isActive ? "nav-text-active":""}`}>{item.name}</p>
+								{icon}
+								<p className={`nav-text ${isActive ? "nav-text-active" : ""}`}>
+									{item.name}
+								</p>
 							</motion.div>
 							{/* </NavLink> */}
 						</div>

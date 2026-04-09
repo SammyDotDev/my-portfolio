@@ -7,15 +7,9 @@ import { workData } from "./data/work.data";
 import WorkCard from "../components/WorkCard";
 
 const Work = () => {
-	useEffect(() => {
-		// Aos.init();
-	}, []);
 	return (
 		<MainWrapper id={3}>
 			<motion.div
-				data-aos="fade-up"
-				data-aos-duration="1000"
-				data-aos-easing="ease-in"
 				className="container lg:w-full md:w-full pl-10 pr-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

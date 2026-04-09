@@ -39,9 +39,6 @@ const About = () => {
 				data-aos-duration="1000"
 				data-aos-easing="ease-in-out"
 				className="container lg:w-full md:w-full px-6 lg:px-10 pb-5 pt-5 sm:w-11/12 w-full h-full"
-				// initial={{ opacity: 0, y: 150 }}
-				// animate={{ opacity: 1, y: 0 }}
-				// transition={{ ease: "easeOut", duration: 1 }}
 			>
 				<TitleContainer>ABOUT ME</TitleContainer>
 				<div className="row lg:flex lg:flex-row md:flex-col w-full md:flex flex flex-col">
@@ -76,7 +73,7 @@ const About = () => {
 									{skillStats.map((item) => {
 										return (
 											<motion.div
-												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#000]"
+												className="skill-li lg:flex lg:flex-row flex flex-col rounded-full bg-[#fff]"
 												key={item.id}
 												initial={{ x: -100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
@@ -86,9 +83,7 @@ const About = () => {
 													delay: item.delay,
 												}}
 											>
-												<li className="skill-name text-[#aceeb4]">
-													{item.name}
-												</li>
+												<li className="skill-name text-[#000]">{item.name}</li>
 											</motion.div>
 										);
 									})}
@@ -109,7 +104,7 @@ const About = () => {
 												key={item.id}
 												className={`exp-texts flex flex-col mb-10 p-2 ${
 													index != expData.length - 1 &&
-													"border-b border-[#aceeb4]"
+													"border-dashed border-b-4 border-[#fff]"
 												}`}
 												initial={{ x: 100, opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}

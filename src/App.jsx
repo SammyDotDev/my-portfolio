@@ -5,6 +5,7 @@ import About from "./components/main/About";
 import Work from "./components/main/Work";
 import Contact from "./components/main/Contact";
 import { motion } from "framer-motion";
+import { Parallax } from "@react-spring/parallax";
 
 function App() {
 	return (
@@ -24,12 +25,6 @@ function App() {
 					<Work />
 					<Contact />
 				</div>
-				{/* <Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/work" element={<Work />} />
-					<Route path="/contact" element={<Contact />} />
-				</Routes> */}
 			</main>
 		</div>
 	);

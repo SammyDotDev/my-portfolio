@@ -91,7 +91,7 @@ html {
 }
 
 .app {
-	background-color: #000000;
+	background-color: #101314;
 
 	background-size: cover;
 	overflow: scroll;
@@ -102,9 +102,9 @@ html {
 		.side-nav {
 			height: 95%;
 			// background-color: #1c1c1c;
-			border: 1px solid #1c1c1c;
+			border: 10px dashed #aceeb4;
 
-			border-radius: 30px;
+			border-radius: 60px;
 			overflow: hidden;
 			.side-nav-container {
 				margin: auto;
@@ -112,7 +112,7 @@ html {
 					display: flex;
 					align-items: center;
 					position: relative;
-					border: 2px solid #1c1c1c;
+					border: 4px dashed #fff;
 					backdrop-filter: blur(10px);
 					border-radius: 100px;
 					//   background: linear-gradient(145deg, #191919, #1e1e1e);
@@ -133,7 +133,7 @@ html {
 						font-style: normal;
 						transition: 0.3s ease-in-out;
 						// left: 50px;
-						color: #6c757d;
+						color: #fff;
 						width: 100px;
 						text-align: center;
 					}
@@ -144,10 +144,11 @@ html {
 				.nav-icon:hover {
 					background-color: #00000073;
 					cursor: pointer;
+					border: 4px dashed #aceeb4;
 				}
 				.nav-icon-active {
 					// background: #000000;
-					border: 2px solid #aceeb4;
+					border: 4px dashed #aceeb4;
 					cursor: pointer;
 					width: 100%;
 				}
@@ -166,10 +167,10 @@ html {
 				width: 100%;
 
 				.container {
-					// background-color: #1c1c1c;
-					overflow: scroll;
+					background-color: #ffffff09;
+					// overflow: scroll;
 					//padding-bottom: 100px;
-					border: 1px solid #1c1c1c;
+					border: 4px dashed #ffffff;
 					border-radius: 35px;
 					.work-card {
 						border-radius: 50px;
@@ -212,9 +213,10 @@ html {
 							}
 
 							.skill-stats {
-								//background-color: #141d1d;
+								// background-color: #141d1d;
 								// background-color: #dee2e6;
-								background: #1c1c1c;
+								background: #00000059;
+								border: 4px dashed #ffffff;
 
 								height: fit-content;
 								margin-top: auto;
@@ -244,8 +246,8 @@ html {
 					}
 					.col-30 {
 						.exp-tab {
-							border: 1px solid #1c1c1c;
-							background-color: #1c1c1c;
+							background-color: #00000059;
+							border: 4px dashed #ffffff;
 							.exp-container {
 								.education {
 									.edu-school {

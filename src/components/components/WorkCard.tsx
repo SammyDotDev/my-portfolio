@@ -11,7 +11,6 @@ import {
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
-
 const mountElement = document.getElementById("overlay");
 const WorkCard = ({ work }: { work: WorkItem }) => {
 	const [showModal, setShowModal] = useState(false);
@@ -21,22 +20,22 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 	// }
 	const nextImage = () => {
 		setCurrentImageIndex((prev) =>
-			prev === work.subImages.length - 1 ? 0 : prev + 1
+			prev === work.subImages.length - 1 ? 0 : prev + 1,
 		);
 	};
 
 	const prevImage = () => {
 		setCurrentImageIndex((prev) =>
-			prev === 0 ? work.subImages.length - 1 : prev - 1
+			prev === 0 ? work.subImages.length - 1 : prev - 1,
 		);
 	};
 	return (
 		<>
 			<div
-				className="group relative shadow-lg border-2
-            border-[#1c1c1c]
+				className="group relative shadow-lg border-dashed border-4
+            border-[#fff]
             //   hover:border-[#aceeb4]
-              transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4 work-card"
+              transition-all duration-300 flex flex-col justify-between lg:w-[23%] sm:w-full md:w-[48%] min-h-[500] rounded-3xl p-4 work-card hover:rotate-3 hover:scale-90"
 			>
 				{/* Main Image */}
 				<div className="relative overflow-hidden rounded-[47px]">
@@ -257,7 +256,7 @@ const WorkCard = ({ work }: { work: WorkItem }) => {
 							</div>
 						</motion.div>
 					</div>,
-					mountElement
+					mountElement,
 				)}
 		</>
 	);
