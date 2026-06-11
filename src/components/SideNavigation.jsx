@@ -8,28 +8,28 @@ const navParams = [
 		name: "Home",
 		icon: <Home2 size="32" color="#6c757d" />,
 		navigation: "/",
-		delay: 0.3,
+		delay: 0,
 	},
 	{
 		id: 2,
 		name: "About",
 		icon: <User size="32" color="#6c757d" />,
 		navigation: "/about",
-		delay: 0.5,
+		delay: 0.1,
 	},
 	{
 		id: 3,
 		name: "Work",
 		icon: <Briefcase size="32" color="#6c757d" />,
 		navigation: "/work",
-		delay: 0.7,
+		delay: 0.3,
 	},
 	{
 		id: 4,
 		name: "Contact",
 		icon: <Messages2 size="32" color="#6c757d" />,
 		navigation: "/contact",
-		delay: 0.9,
+		delay: 0.5,
 	},
 ];
 const SideNavigation = () => {
