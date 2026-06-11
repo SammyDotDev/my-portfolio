@@ -92,8 +92,10 @@ html {
 
 .app {
 	background-color: #101314;
-
-	background-size: cover;
+	background-image: url("/public/bg/bg.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+	// background-size: cover;
 	overflow: scroll;
 	.side-main {
 		display: flex;
