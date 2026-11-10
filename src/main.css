@@ -2,10 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --background-color: #efeceb;
+  --text-color: #1a1a1a;
+  --accent-color: #101314;
+  --secondary-color: #ffffff73;
+}
+
+/* 2. Dark Theme overrides */
+[data-theme=dark] {
+  --background-color: #101314;
+  --text-color: #f3f4f6;
+  --accent-color: #efeceb;
+  --secondary-color: #00000073;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
-  background-color: #101314;
+  background-color: var(--background-color);
 }
 
 * {
@@ -19,7 +34,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  color: #ffffff;
+  color: var(--text-color);
   line-height: 50px;
 }
 
@@ -28,23 +43,21 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  color: #ffffff;
+  color: var(--text-color);
   line-height: 30px;
 }
 
 .info-header {
-  background-color: #000000;
+  background-color: var(--secondary-color);
   padding: 6px 20px;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   justify-content: center;
   align-items: center;
 }
 
 .info-header-text {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -56,7 +69,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
-  color: #ffffff;
+  color: var(--text-color);
   margin-left: auto;
   margin-top: 10px;
 }
@@ -78,7 +91,6 @@ html {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 50px;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -87,28 +99,24 @@ html {
 }
 
 .resume-btn {
-  background-color: #aceeb4;
-  color: #000000;
+  background-color: var(--accent-color);
+  color: var(--background-color);
   font-size: 24px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   transition: 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
-  border-radius: 100px;
 }
 
 .resume-btn:hover {
   cursor: pointer;
-  background-color: rgba(44, 44, 44, 0.5882352941);
-  color: rgb(255, 255, 255);
+  opacity: 0.8;
 }
 
 .app {
-  background-color: #101314;
+  background-color: var(--background-color);
   background-image: url("/public/bg/bg.png");
   background-repeat: repeat;
   background-attachment: fixed;
-  overflow: scroll;
 }
 .app .side-main {
   display: flex;
@@ -117,8 +125,6 @@ html {
 }
 .app .side-main .side-nav {
   height: 95%;
-  border: 10px dashed #aceeb4;
-  border-radius: 60px;
   overflow: hidden;
 }
 .app .side-main .side-nav .side-nav-container {
@@ -128,9 +134,8 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  border: 4px dashed #fff;
+  border: 4px dashed var(--text-color);
   backdrop-filter: blur(10px);
-  border-radius: 100px;
   padding: 10px;
   transition: 0.5s ease-in-out;
   margin-left: auto;
@@ -144,20 +149,21 @@ html {
   font-weight: 400;
   font-style: normal;
   transition: 0.3s ease-in-out;
-  color: #fff;
+  color: var(--text-color);
   width: 100px;
   text-align: center;
 }
 .app .side-main .side-nav .side-nav-container .nav-icon .nav-text-active {
-  color: #aceeb4;
+  color: var(--background-color);
 }
 .app .side-main .side-nav .side-nav-container .nav-icon:hover {
-  background-color: rgba(0, 0, 0, 0.4509803922);
+  background-color: var(--secondary-color);
   cursor: pointer;
-  border: 4px dashed #aceeb4;
+  border: 4px dashed var(--accent-color);
 }
 .app .side-main .side-nav .side-nav-container .nav-icon-active {
-  border: 4px dashed #aceeb4;
+  background: var(--accent-color);
+  border: 4px dashed var(--accent-color);
   cursor: pointer;
   width: 100%;
 }
@@ -175,11 +181,7 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container {
   background-color: rgba(255, 255, 255, 0.0352941176);
-  border: 4px dashed #ffffff;
-  border-radius: 35px;
-}
-.app .main .scroll-container .main-wrapper .container .work-card {
-  border-radius: 50px;
+  border: 4px dotted var(--accent-color);
 }
 .app .main .scroll-container .main-wrapper .container .nav-indicator {
   width: 100%;
@@ -190,10 +192,9 @@ html {
   font-weight: 200;
   transition: 0.3s ease-in-out;
   padding: 6px 15px;
-  background-color: #aceeb4;
-  color: #000000;
+  background-color: var(--accent-color);
+  color: var(--background-color);
   font-weight: 700;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .app .main .scroll-container .main-wrapper .container .row {
@@ -212,9 +213,7 @@ html {
   margin-top: 60px;
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats {
-  background: rgba(0, 0, 0, 0.3490196078);
-  border: 4px dashed #ffffff;
-  height: -moz-fit-content;
+  background: var(--secondary-color);
   height: fit-content;
   margin-top: auto;
 }
@@ -226,7 +225,6 @@ html {
 }
 .app .main .scroll-container .main-wrapper .container .row .col-70 .skill-stats .skills-container .skill-ul .skill-li {
   display: flex;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 12px 0;
   padding: 10px 20px;
@@ -237,8 +235,7 @@ html {
   font-weight: 300;
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab {
-  background-color: rgba(0, 0, 0, 0.3490196078);
-  border: 4px dashed #ffffff;
+  background-color: var(--secondary-color);
 }
 .app .main .scroll-container .main-wrapper .container .col-30 .exp-tab .exp-container .education .edu-school {
   font-size: 17px;
@@ -254,7 +251,6 @@ html {
 }
 .app .main .scroll-container .main-wrapper .work-tab {
   transition: 0.4s ease-in-out;
-  border-radius: 40px;
 }
 .app .main .scroll-container .main-wrapper .work-tab:hover {
   transition: 0.4s ease-in-out;
@@ -272,7 +268,6 @@ html {
   }
   .app .side-main {
     border-top: 0;
-    background-color: rgba(0, 0, 0, 0.537254902);
     flex-direction: row;
     z-index: 999;
     width: 90%;
@@ -294,13 +289,11 @@ html {
   }
   .app .side-main .side-nav .side-nav-container .nav-icon {
     height: 60px;
-    background-color: rgba(20, 29, 29, 0.4509803922);
   }
   .app .side-main .side-nav .side-nav-container .nav-text {
     display: none;
   }
   .app .side-main .side-nav .side-nav-container .nav-icon-active {
-    background-color: rgba(0, 0, 0, 0.4509803922);
     cursor: pointer;
   }
   .app .main .scroll-container {
@@ -313,4 +306,6 @@ html {
     width: 100%;
     margin-left: 10px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

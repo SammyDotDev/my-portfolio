@@ -1,35 +1,46 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/main/Home";
-import SideNavigation from "./components/SideNavigation";
-import About from "./components/main/About";
-import Work from "./components/main/Work";
-import Contact from "./components/main/Contact";
 import { motion } from "framer-motion";
-import { Parallax } from "@react-spring/parallax";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Index from ".";
+import ThreeD from "./components/main/3d";
 
 function App() {
-	return (
-		<div className="app">
-			<div className="lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-full relative gap-5 max-w-8xl mx-auto">
-				<motion.div
-					className="side-main w-1/6  lg:ml-5 rounded-2xl lg:flex-col lg:h-screen"
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ ease: "easeOut", duration: 1, delay: 0.4 }}
-				>
-					<SideNavigation />
-				</motion.div>
-				<main className="main lg:flex lg:flex-row lg:justify-center lg:items-center md:w-full flex lg:pt-0 w-full ">
-					<div className="scroll-container ">
-						<Home />
-						<About />
-						<Work />
-						<Contact />
-					</div>
-				</main>
-			</div>
-		</div>
-	);
+  let currentTheme = document.documentElement.dataset.theme;
+  const [themeText, setThemeText] = useState(
+    currentTheme === "dark" ? "LIGHT" : "DARK",
+  );
+
+  const toggleTheme = () => {
+    if (currentTheme === "dark") {
+      currentTheme = "light";
+      setThemeText("DARK");
+    } else {
+      currentTheme = "dark";
+      setThemeText("LIGHT");
+    }
+    document.documentElement.dataset.theme = currentTheme;
+  };
+
+  if (!themeText) {
+    return null;
+  }
+  return (
+    <div className="app">
+      <motion.button
+        onClick={toggleTheme}
+        className="resume-btn py-3 px-7 m-auto w-full sm:w-full md:w-full lg:w-auto"
+        initial={{ y: 1000, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 1.5 }}
+      >
+        TOGGLE {themeText} MODE
+      </motion.button>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/3d" element={<ThreeD />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
