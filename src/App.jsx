@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Index from ".";
+import Index from "./Index";
 import ThreeD from "./components/main/3d";
 
 function App() {
