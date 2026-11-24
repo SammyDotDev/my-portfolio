@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div className="lg:flex lg:flex-row md:flex md:flex-col-reverse flex flex-col-reverse w-full h-full relative gap-5 max-w-8xl mx-auto">
       <motion.div
-        className="side-main w-1/6 lg:ml-5 lg:flex-col lg:h-screen"
+        className="side-main max-w-32 border border-white lg:ml-5 lg:flex-col lg:h-screen"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeOut", duration: 1, delay: 0.4 }}
